@@ -1,0 +1,1155 @@
+First_Published,Advisory,Severity,Summary,Product Names,cvss_base_score
+2019-05-13T17:30:00-0700,Cisco Secure Boot Hardware Tampering Vulnerability,High,"<p>A vulnerability in the logic that handles access control to one of the hardware components in Cisco's proprietary Secure Boot implementation could allow an authenticated, local attacker to write a modified firmware image to the component. This vulnerability affects multiple Cisco products that support hardware-based Secure Boot functionality.</p>
+<p>The vulnerability is due to an improper check on the area of code that manages on-premise updates to a Field Programmable Gate Array (FPGA) part of the Secure Boot hardware implementation. An attacker with elevated privileges and access to the underlying operating system that is running on the affected device could exploit this vulnerability by writing a modified firmware image to the FPGA. A successful exploit could either cause the device to become unusable (and require a hardware replacement) or allow tampering with the Secure Boot verification process, which under some circumstances may allow the attacker to install and boot a malicious software image.</p>
+<p>This advisory will be updated as additional information becomes available.</p>
+<p>Cisco will release software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190513-secureboot"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190513-secureboot</a></p>","[u'Cisco ASA with FirePOWER Services ', u'Cisco Firepower 2100 Series ', u'Cisco Firepower 4100 Series ', u'Cisco Firepower 9000 Series ']",6.7
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Cisco Firepower Threat Defense Software TCP Timer Handling Denial of Service Vulnerability,High,"<p>A vulnerability in the TCP processing engine of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition.</p>
+<p>The vulnerability is due to the improper handling of TCP traffic. An attacker who is using a TCP protocol that is configured for inspection could exploit this vulnerability by sending a specific sequence of packets at a high rate through an affected device. A successful exploit could allow the attacker to temporarily disrupt traffic through the device while it reboots.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-frpwrtd-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-frpwrtd-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",8.6
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software WebVPN Denial of Service Vulnerability,High,"<p>A vulnerability in the WebVPN login process of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause increased CPU utilization on an affected device.</p>
+<p>The vulnerability is due to excessive processing load for existing WebVPN login operations. An attacker could exploit this vulnerability by sending multiple WebVPN login requests to the device. A successful exploit could allow the attacker to increase CPU load on the device, resulting in a denial of service (DoS) condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-sd-cpu-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-sd-cpu-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",8.6
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Lightweight Directory Access Protocol Denial of Service Vulnerability,Medium,"<p>A vulnerability in the implementation of the Lightweight Directory Access Protocol (LDAP) feature in Cisco Adaptive Security Appliance (ASA) Software and Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a denial of service (DoS) condition.</p>
+<p>The vulnerabilities are due to the improper parsing of LDAP packets sent to an affected device. An attacker could exploit these vulnerabilities by sending a crafted LDAP packet, using Basic Encoding Rules (BER), to be processed by an affected device. A successful exploit could allow the attacker to cause the affected device to reload, resulting in a DoS condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftds-ldapdos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftds-ldapdos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",6.8
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software Low-Entropy Keys Vulnerability,High,"A vulnerability in the Deterministic Random Bit Generator (DRBG), also
+known as Pseudorandom Number Generator (PRNG), used in Cisco Adaptive
+Security Appliance (ASA) Software and Cisco Firepower Threat Defense
+(FTD) Software could allow an unauthenticated, remote attacker to cause a
+cryptographic collision, enabling the attacker to discover the private
+key of an affected device.<br />
+<br />
+The vulnerability is due to
+insufficient entropy in the DRBG when generating cryptographic keys. An
+attacker could exploit this vulnerability by generating a large number
+of cryptographic keys on an affected device and looking for collisions
+with target devices. A successful exploit could allow the attacker to
+impersonate an affected target device or to decrypt  traffic secured by
+an affected key that is sent to or from an affected target device.
+<p>Cisco has released software updates that address this vulnerability. There are workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-entropy"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-entropy</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",5.3
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software TCP Proxy Denial of Service Vulnerability,Medium,"<p>A vulnerability in the TCP proxy functionality for Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause the device to restart unexpectedly, resulting in a denial of service (DoS) condition.</p>
+<p>The vulnerability is due to an error in TCP-based packet inspection, which could cause the TCP packet to have an invalid Layer 2 (L2)-formatted header. An attacker could exploit this vulnerability by sending a crafted TCP packet sequence to the targeted device. A successful exploit could allow the attacker to cause a DoS condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftdtcp-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftdtcp-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",6.8
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software WebVPN Denial of Service Vulnerability,High,"<p>A vulnerability in the WebVPN service of Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an authenticated, remote attacker to cause a denial of service (DoS) condition on an affected device.</p>
+<p>The vulnerability is due to improper management of authenticated sessions in the WebVPN portal. An attacker could exploit this vulnerability by authenticating with valid credentials and accessing a specific URL in the WebVPN portal. A successful exploit could allow the attacker to cause the device to reload, resulting in a temporary DoS condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",7.7
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance and Firepower Threat Defense Software Layer 2 Filtering Bypass Vulnerability,Medium,"<p>A vulnerability in the detection engine of Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an unauthenticated, adjacent attacker to send data directly to the kernel of an affected device.</p>
+<p>The vulnerability exists because the software improperly filters Ethernet frames sent to an affected device. An attacker could exploit this vulnerability by sending crafted packets to the management interface of an affected device. A successful exploit could allow the attacker to bypass the Layer 2 (L2) filters and send data directly to the kernel of the affected device. A malicious frame successfully delivered would make the target device generate a specific syslog entry.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-bypass"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-bypass</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",4.3
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance and Firepower Threat Defense Software WebVPN Cross-Site Scripting Vulnerabilities,Medium,"<p>Multiple vulnerabilities in the WebVPN service of Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the WebVPN portal of an affected device.</p>
+<p>The vulnerabilities exist because the software insufficiently validates user-supplied input on an affected device. An attacker could exploit these vulnerabilities by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the affected interface or access sensitive browser-based information. An attacker would need <em>administrator</em> privileges on the device to exploit these vulnerabilities.</p>
+<p>Cisco has released software updates that address these vulnerabilities. There are no workarounds that address these vulnerabilities.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-xss"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-xss</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",4.8
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Firepower Threat Defense Software VPN SAML Authentication Bypass Vulnerability,High,"A vulnerability in the implementation of Security Assertion Markup
+Language (SAML) 2.0 Single Sign-On (SSO) for Clientless SSL VPN (WebVPN) and
+AnyConnect Remote Access VPN in Cisco Adaptive Security Appliance (ASA)
+Software and Cisco Firepower Threat Defense (FTD) Software could allow
+an unauthenticated, remote attacker to successfully establish a VPN
+session to an affected device.<br />
+<br />
+The vulnerability is due to
+improper credential management when using NT LAN Manager (NTLM) or basic
+authentication. An attacker could exploit this vulnerability by opening
+a VPN session to an affected device after another VPN user has
+successfully authenticated to the affected device via SAML SSO. A successful
+exploit could allow the attacker to connect to secured networks behind
+the affected device.
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asaftd-saml-vpn"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asaftd-saml-vpn</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",5.8
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software and Cisco Firepower Threat Defense Software MOBIKE Denial of Service Vulnerability,High,"<p>A vulnerability in the Internet Key Exchange Version 2 Mobility and Multihoming Protocol (MOBIKE) feature for the Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause a memory leak or a reload of an affected device that leads to a denial of service (DoS) condition. <br />
+<br />
+The vulnerability is due to the incorrect processing of certain MOBIKE packets. An attacker could exploit this vulnerability by sending crafted MOBIKE packets to an affected device to be processed. A successful exploit could cause an affected device to continuously consume memory and eventually reload, resulting in a DoS condition. The MOBIKE feature is supported only for IPv4 addresses.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-ike-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ftd-ike-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",8.6
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software VPN Denial of Service Vulnerability,Medium,"<p>A vulnerability in the remote access VPN session manager of Cisco&nbsp;Adaptive Security Appliance (ASA) Software could allow a unauthenticated, remote attacker to cause a denial of service (DoS) condition on the remote access VPN services.</p>
+<p>The vulnerability is due to an issue with the remote access VPN&nbsp;session manager. An attacker could exploit this vulnerability by requesting an excessive number of remote access VPN sessions. An exploit could allow the attacker to cause a DoS condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-vpn-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-vpn-dos</a></p>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.3
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software IPsec Denial of Service Vulnerability,High,"<p>A vulnerability in the software cryptography module of the Cisco Adaptive Security Virtual Appliance (ASAv) and Firepower 2100 Series running Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause an unexpected reload of the device that results in a denial of service (DoS) condition.</p>
+<p>The vulnerability is due to a logic error with how the software cryptography module handles IPsec sessions.  An attacker could exploit this vulnerability by creating and sending traffic in a high number of IPsec sessions through the targeted device. A successful exploit could cause the device to reload and result in a DoS condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ipsec-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-ipsec-dos</a></p>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.6
+2019-05-01T16:00:00-0700,Cisco Adaptive Security Appliance Software Cross-Site Request Forgery Vulnerability,High,"<p>A vulnerability in the web-based management interface of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to conduct a cross-site request forgery (CSRF) attack on an affected system.<br />
+<br />
+The vulnerability is due to insufficient CSRF protections for the web-based management interface on an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to follow a malicious link. A successful exploit could allow the attacker to perform arbitrary actions with the privilege level of the affected user. If the user has administrative privileges, the attacker could alter the configuration of, extract information from, or reload an affected device.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-csrf"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20190501-asa-csrf</a></p>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.1
+2018-12-19T16:00:00-0800,Cisco Adaptive Security Appliance Software Privilege Escalation Vulnerability,High,"<p><p>A vulnerability in the authorization subsystem of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, but unprivileged (levels 0 and 1), remote attacker to perform privileged actions by using the web management interface.</p>
+<p>The vulnerability is due to improper validation of user privileges when using the web management interface. An attacker could exploit this vulnerability by sending specific HTTP requests via HTTPS to an affected device as an unprivileged user. An exploit could allow the attacker to retrieve files (including the running configuration) from the device or to upload and replace software images on the device.</p></p>
+<p>Cisco has released software updates that address this vulnerability. There are workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181219-asa-privesc"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181219-asa-privesc</a></p>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.1
+2018-06-06T16:00:00-0700,Cisco Adaptive Security Appliance Web Services Denial of Service Vulnerability,High,"A vulnerability in the web interface of the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to cause an affected device to reload unexpectedly, resulting in a denial of service (DoS) condition. It is also possible on certain software releases that the ASA will not reload, but an attacker could view sensitive system information without authentication by using directory traversal techniques.<br />
+<br />
+The vulnerability is due to lack of proper input validation of the HTTP URL. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected device. An exploit could allow the attacker to cause a DoS condition or unauthenticated disclosure of information. This vulnerability applies to IPv4 and IPv6 HTTP traffic.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180606-asaftd"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180606-asaftd</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",8.6
+2015-12-09T16:00:00-0800,Vulnerability in Java Deserialization Affecting Cisco Products,High,"A vulnerability in the Java deserialization used by the Apache Commons Collections (ACC) library could allow an unauthenticated, remote attacker to execute arbitrary code.<br />
+<br />
+The vulnerability is due to insecure deserialization of user-supplied content by the affected software. An attacker could exploit this vulnerability by submitting crafted input to an application on a targeted system that uses the ACC library. After the vulnerable library on the affected system deserializes the content, the attacker could execute arbitrary code on the system, which could be used to conduct further attacks.<br />
+<br />
+On November 6, 2015, Foxglove Security Group published information about a remote code execution vulnerability that affects multiple releases of the ACC library. The report contains detailed proof-of-concept code for a number of applications, including WebSphere Application Server, JBoss, Jenkins, OpenNMS, and WebLogic. This is a remotely exploitable vulnerability that allows an attacker to inject any malicious code or execute any commands that exist on the server. A wide range of potential impacts includes allowing the attacker to obtain sensitive information.<br />
+<br />
+Object serialization is a technique that many programming languages use to convert an object into a sequence of bits for transfer purposes. Deserialization is a technique that reassembles those bits back to an object. This vulnerability occurs in Java object serialization for network transport and object deserialization on the receiving side.<br />
+<br />
+Many applications accept serialized objects from the network without performing input validation checks before deserializing it. Crafted serialized objects can therefore lead to execution of arbitrary attacker code.<br />
+<br />
+Although the problem itself is in the serialization and deserialization functionality of the Java programming language, the ACC library is known to be affected by this vulnerability. Any application or application framework could be vulnerable if it uses the ACC library and deserializes arbitrary, user-supplied Java serialized data.<br />
+<br />
+Additional details about the vulnerability are available at the following links:<br />
+<div><br />
+</div>
+<a href=""http://www.kb.cert.org/vuls/id/576313"">Official Vulnerability Note from CERT</a><br />
+<a href=""http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/"">Foxglove Security</a><br />
+<a href=""https://blogs.apache.org/foundation/entry/apache_commons_statement_to_widespread"">Apache Commons Statement</a><br />
+<a href=""https://blogs.oracle.com/security/entry/security_alert_cve_2015_4852"">Oracle Security Alert</a><br />
+<div><br />
+</div>
+Cisco will release software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151209-java-deserialization"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151209-java-deserialization</a>",[u'Cisco ASA CX Context-Aware Security Software '],NA
+2016-09-27T22:40:00-0700,Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: September 2016,Medium,"On September 22, 2016, the OpenSSL Software Foundation released an advisory that describes 14 vulnerabilities. Of these 14 vulnerabilities, the OpenSSL Software Foundation classifies one as &ldquo;Critical Severity,&rdquo; one as &ldquo;Moderate Severity,&rdquo; and the other 12 as &ldquo;Low Severity.&rdquo;
+<br />
+<br />
+Subsequently, on September 26, the OpenSSL Software Foundation released an additional advisory that describes two new vulnerabilities. These vulnerabilities affect the OpenSSL versions that were released to address the vulnerabilities disclosed in the previous advisory. One of the new vulnerabilities was rated as &ldquo;High Severity&rdquo; and the other as &ldquo;Moderate Severity.&rdquo;
+<br />
+<br />
+Of the 16 released vulnerabilities:<br />
+<ul>
+    <li>Fourteen track issues that could result in a denial of service (DoS) condition</li>
+    <li>One (CVE-2016-2183, aka SWEET32) tracks an implementation of a Birthday attack against Transport Layer Security (TLS) block ciphers that use a 64-bit block size that could result in loss of confidentiality</li>
+    <li>One (CVE-2016-2178) is a timing side-channel attack that, in specific circumstances, could allow an attacker to derive the private DSA key that belongs to another user or service running on the same system</li>
+</ul>
+<br />
+Five of the 16 vulnerabilities exclusively affect the recently released OpenSSL versions that are part of the 1.1.0 release series, which has not yet been integrated into any Cisco product.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160927-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160927-openssl</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],NA
+2018-10-31T19:30:00-0700,Cisco Adaptive Security Appliance Software and Cisco Firepower Threat Defense Software Denial of Service Vulnerability,High,"A vulnerability in the Session Initiation Protocol (SIP) inspection
+engine of Cisco Adaptive Security Appliance (ASA) Software and Cisco
+Firepower Threat Defense (FTD) Software could allow an unauthenticated,
+remote attacker to cause an affected device to reload or trigger high CPU, resulting in a
+denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to
+improper handling of SIP traffic. An attacker could exploit
+this vulnerability by sending SIP requests designed to specifically trigger this issue at a high rate across an affected
+device.
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability. Mitigation options that address this vulnerability are available.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181031-asaftd-sip-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181031-asaftd-sip-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",8.6
+2018-10-03T16:00:00-0700,Cisco Adaptive Security Appliance Direct Memory Access Denial of Service Vulnerability,High,"<p>A vulnerability in the cryptographic hardware accelerator driver of Cisco&nbsp;Adaptive Security Appliance (ASA) Software and Cisco&nbsp;Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to reload, resulting in a temporary denial of service&nbsp;(DoS) condition.</p>
+<p>The vulnerability exists because the affected devices have a limited amount of Direct Memory Access&nbsp;(DMA) memory and the affected software improperly handles resources in low-memory conditions. An attacker could exploit this vulnerability by sending a sustained, high rate of malicious traffic to an affected device to exhaust memory on the device. A successful exploit could allow the attacker to exhaust DMA memory on the affected device, which could cause the device to reload and result in a temporary DoS condition.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-dma-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-dma-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",8.6
+2018-04-18T16:00:00-0700,"Cisco ASA Software, FTD Software, and AnyConnect Secure Mobility Client SAML Authentication Session Fixation Vulnerability",High,"A vulnerability in the implementation of Security Assertion Markup Language (SAML) Single Sign-On (SSO) authentication for Cisco AnyConnect Secure Mobility Client for Desktop Platforms, Cisco Adaptive Security Appliance (ASA) Software, and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to establish an authenticated AnyConnect session through an affected device running ASA or FTD Software. The authentication would need to be done by an unsuspecting third party.<br />
+<br />
+The vulnerability exists because there is no mechanism for the ASA or FTD Software to detect that the authentication request originates from the AnyConnect client directly. An attacker could exploit this vulnerability by persuading a user to click a crafted link and authenticating using the company's Identity Provider (IdP). A successful exploit could allow the attacker to  hijack a valid authentication token and use that to establish an authenticated AnyConnect session through an affected device running ASA or FTD Software.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asaanyconnect"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asaanyconnect</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",6.5
+2018-10-03T16:00:00-0700,Cisco Adaptive Security Appliance TCP Syslog Denial of Service Vulnerability,Medium,"<p>A vulnerability in the TCP syslog module of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to exhaust the 1550-byte buffers on an affected device, resulting in a denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to a missing boundary check in an internal function. An attacker could exploit this vulnerability by establishing a man-in-the-middle position between an affected device and its configured TCP syslog server and then maliciously modifying the TCP header in segments that are sent from the syslog server to the affected device. A successful exploit could allow the attacker to exhaust buffer on the affected device and cause all TCP-based features to stop functioning, resulting in a DoS condition. The affected TCP-based features include AnyConnect SSL VPN, clientless SSL VPN, and management connections such as Secure Shell (SSH), Telnet, and HTTPS.</p>
+<p>There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-syslog-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-syslog-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",6.8
+2018-10-03T16:00:00-0700,Cisco Adaptive Security Appliance Access Control List Bypass Vulnerability,Medium,"<p><p>A vulnerability in the per-user-override feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to bypass an access control list (ACL) that is configured for an interface of an affected device.<br />
+<br />
+The vulnerability is due to errors that could occur when the affected software constructs and applies per-user-override rules. An attacker could exploit this vulnerability by connecting to a network through an affected device that has a vulnerable configuration. A successful exploit could allow the attacker to access resources that are behind the affected device and would typically be protected by the interface ACL.</p></p>
+<p>There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-acl-bypass"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-acl-bypass</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",5.8
+2018-10-03T16:00:00-0700,Cisco Adaptive Security Appliance IPsec VPN Denial of Service Vulnerability,Medium,"<p><p>A vulnerability in the implementation of Traffic Flow Confidentiality (TFC) over IPsec functionality in Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause an affected device to restart unexpectedly, resulting in a denial of service (DoS) condition.</p>
+<p>The vulnerability is due to an error that may occur if the affected software renegotiates the encryption key for an IPsec tunnel when certain TFC traffic is in flight. An attacker could exploit this vulnerability by sending a malicious stream of TFC traffic through an established IPsec tunnel on an affected device. A successful exploit could allow the attacker to cause a daemon process on the affected device to crash, which could cause the device to crash and result in a DoS condition.</p></p>
+<p>There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-ipsec-dos"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181003-asa-ipsec-dos</a></p>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",6.8
+2018-09-26T16:00:00-0700,Cisco IOS XE Software and Cisco ASA 5500-X Series Adaptive Security Appliance IPsec Denial of Service Vulnerability,High,"<p>A vulnerability in the IPsec driver code of multiple Cisco&nbsp;IOS XE Software platforms and the Cisco&nbsp;ASA 5500-X Series Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to cause the device to reload.</p>
+<p>The vulnerability is due to improper processing of malformed IPsec Authentication Header (AH) or Encapsulating Security Payload (ESP) packets. An attacker could exploit this vulnerability by sending malformed IPsec packets to be processed by an affected device. An exploit could allow the attacker to cause a reload of the affected device.</p>
+<p>Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.</p>
+<p>This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180926-ipsec"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180926-ipsec</a></p>
+This advisory is part of the September 26, 2018, release of the Cisco IOS and IOS XE Software Security Advisory Bundled Publication, which includes 12 Cisco Security Advisories that describe 13 vulnerabilities. For a complete list of the advisories and links to them, see <a href=""http://tools.cisco.com/security/center/viewErp.x?alertId=ERP-69981"">Cisco Event Response: September 2018 Semiannual Cisco IOS and IOS XE Software Security Advisory Bundled Publication</a>.","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA with FirePOWER Services ']",8.6
+2018-01-29T17:00:00-0800,Cisco Adaptive Security Appliance Remote Code Execution and Denial of Service Vulnerability,Critical,"<strong>Update from February 5, 2018: </strong>After further investigation, Cisco has identified additional attack vectors and features that are affected by this vulnerability. In addition, it was also found that the original fix was incomplete so new fixed code versions are now available. Please see the <a href=""#fixed"">Fixed Software</a> section for more information. <br />
+<br />
+<hr />
+<br />
+A vulnerability in the XML parser of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause a reload of the affected system or to remotely execute code. It was also possible that&nbsp; the ASA could stop processing incoming Virtual Private Network (VPN) authentication requests due to a low memory condition.<br />
+<br />
+The vulnerability is due to an issue with allocating and freeing memory  when processing a malicious XML payload. An attacker could exploit this vulnerability by sending a crafted XML packet to a vulnerable interface on an affected system. An exploit could allow the attacker to execute arbitrary code and obtain full control of the system, cause a reload of the affected device or stop processing of incoming VPN authentication requests.<br />
+<br />
+To be vulnerable the ASA must have Secure Socket Layer (SSL) services or IKEv2 Remote Access VPN services enabled on an interface. The risk of the vulnerability being exploited also depends on the accessibility of the interface to the attacker. For a comprehensive list of vulnerable ASA features please refer to the table in the  <a href=""#vulnerable"">Vulnerable Products</a> section.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address all the features that are affected by this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180129-asa1"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180129-asa1</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco Firepower Threat Defense Software ']",10.0
+2018-04-18T16:00:00-0700,Cisco Adaptive Security Appliance Virtual Private Network SSL Client Certificate Bypass Vulnerability,High,"A vulnerability in the Secure Sockets Layer (SSL) Virtual Private Network (VPN) Client Certificate Authentication feature for Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to establish an SSL VPN connection and bypass certain SSL certificate verification steps.<br />
+<br />
+The vulnerability is due to incorrect verification of the SSL Client Certificate. An attacker could exploit this vulnerability by connecting to the ASA VPN without a proper private key and certificate pair. A successful exploit could allow the attacker to establish an SSL VPN connection to the ASA when the connection should have been rejected.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability. <br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa1"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa1</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.5
+2015-06-12T16:00:00-0700,Multiple Vulnerabilities in OpenSSL (June 2015) Affecting Cisco Products,High,"On June 11, 2015, the OpenSSL Project released a security advisory detailing six distinct vulnerabilities, and another fix that provides hardening protections against exploits as described in the Logjam research.<br />
+<br />
+Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or corrupt portions of OpenSSL process memory. <br />
+<br />
+This advisory will be updated as additional information becomes available.<br />
+<br />
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that mitigate these vulnerabilities may be available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150612-openssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",7.8
+2018-04-18T16:00:00-0700,Cisco Adaptive Security Appliance Flow Creation Denial of Service Vulnerability,High,"A vulnerability in the ingress flow creation functionality of Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to cause the CPU to increase upwards of 100 percent utilization, causing a denial of service (DoS) condition on an affected system. <br />
+<br />
+The vulnerability is due to incorrect handling of an internal software lock that could prevent other system processes from getting CPU cycles, causing a high CPU condition. An attacker could exploit this vulnerability by sending a steady stream of malicious IP packets that can cause connections to be created on the targeted device. A successful exploit could allow the attacker to exhaust CPU resources, resulting in a DoS condition during which traffic through the device could be delayed. This vulnerability applies to either IPv4 or IPv6 ingress traffic either to or across an affected device.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa2"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa2</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.6
+2018-04-18T16:00:00-0700,Cisco Adaptive Security Appliance WebVPN Cross-Site Scripting Vulnerability,Medium,"A vulnerability in the <strong>Login</strong> screen of the Clientless SSL VPN (WebVPN) portal of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device.<br />
+<br />
+The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive browser-based information.<br />
+<br />
+There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asawvpn"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asawvpn</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2018-04-18T16:00:00-0700,Cisco Adaptive Security Appliance TLS Denial of Service Vulnerability,High,"A vulnerability in the Transport Layer Security (TLS) library of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a reload of the affected device, resulting in a denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to insufficient validation of user-supplied input. An attacker could exploit this vulnerability by sending a malicious TLS message to an interface enabled for Secure Layer Socket (SSL) services on an affected device. Messages using SSL Version 3 (SSLv3) or SSL Version 2 (SSLv2) cannot be be used to exploit this vulnerability. An exploit could allow the attacker to cause a buffer underflow, triggering a crash on an affected device.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa3"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa3</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.6
+2018-04-18T16:00:00-0700,Cisco Adaptive Security Appliance Application Layer Protocol Inspection Denial of Service Vulnerabilities,High,"Multiple vulnerabilities in the Application Layer Protocol Inspection feature of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to trigger a reload of an affected device, resulting in a denial of service (DoS) condition.<br />
+<br />
+The vulnerabilities are due to logical errors during traffic inspection. An attacker could exploit these vulnerabilities by sending a high volume of malicious traffic across an affected device. An exploit could allow the attacker to cause a deadlock condition, resulting in a reload of an affected device.<br />
+<br />
+Cisco has released software updates that address these vulnerabilities. There are no workarounds that address these vulnerabilities.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa_inspect"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asa_inspect</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.6
+2018-04-18T16:00:00-0700,Cisco Adaptive Security Appliance Clientless SSL VPN Cross-Site Scripting Vulnerability,Medium,"A vulnerability in the <strong>Web Server Authentication Required</strong> screen of the Clientless Secure Sockets Layer (SSL) VPN portal of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of that portal on an affected device.<br />
+<br />
+The vulnerability is due to insufficient validation of user-supplied input by the web-based interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the portal or allow the attacker to access sensitive browser-based information.<br />
+<br />
+There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asawvpn2"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20180418-asawvpn2</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2017-10-16T14:00:00-0700,Multiple Vulnerabilities in Wi-Fi Protected Access and Wi-Fi Protected Access II,High,"On October 16, 2017, a research paper with the title &ldquo;Key Reinstallation Attacks: Forcing Nonce Reuse in WPA2&rdquo; was made publicly available. This paper discusses seven vulnerabilities affecting session key negotiation in both the Wi-Fi Protected Access (WPA) and the Wi-Fi Protected Access II (WPA2) protocols. These vulnerabilities may allow the reinstallation of a pairwise transient key, a group key, or an integrity key on either a wireless client or a wireless access point. Additional research also led to the discovery of three additional vulnerabilities (not discussed in the original paper) affecting wireless supplicant supporting either the 802.11z (Extensions to Direct-Link Setup) standard or the 802.11v (Wireless Network Management) standard. The three additional vulnerabilities could also allow the reinstallation of a pairwise key, group key, or integrity group key. <br />
+<br />
+Among these ten vulnerabilities, only one (CVE-2017-13082) may affect components of the wireless infrastructure (for example, Access Points), while the other nine vulnerabilities may affect only client devices.
+<br />
+<br />
+Multiple Cisco wireless products are affected by these vulnerabilities. <br />
+<br />
+Cisco will release software updates that address these vulnerabilities. There are workarounds that addresses the vulnerabilities in CVE-2017-13077, CVE-2017-13078, CVE-2017-13079, CVE-2017-13080, CVE-2017-13081, and CVE-2017-13082. There are no workarounds for CVE-2017-13086, CVE-2017-13087, and CVE-2017-13088.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171016-wpa"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171016-wpa</a><br />","[u'Cisco ASA with FirePOWER Services ', u'Cisco FirePOWER Services Software for ASA ']",4.3
+2017-10-04T16:00:00-0700,Cisco Adaptive Security Appliance Software Direct Authentication Denial of Service Vulnerability,High,"A vulnerability in the implementation of the direct authentication feature in Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause an affected device to unexpectedly reload, resulting in a denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to incomplete input validation of the HTTP header. An attacker could exploit this vulnerability by sending a crafted HTTP request to the local IP address of an affected device. A successful exploit could allow the attacker to cause the affected device to reload.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can be used to exploit this vulnerability. This vulnerability affects systems that have the direct authentication feature enabled. This vulnerability can be triggered by IPv4 or IPv6 traffic.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171004-asa"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171004-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.6
+2017-10-04T16:00:00-0700,Cisco Adaptive Security Appliance Software HREF Cross-Site Scripting Vulnerability,Medium,"A vulnerability in the web-based management interface of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device.<br />
+<br />
+The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive browser-based information.<br />
+<br />
+Additional information about XSS attacks and potential mitigations can be found at:<br />
+<ul>
+    <li>
+    <a href=""https://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"">https://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss</a></li>
+    <li><a href=""https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)"">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>
+</ul>
+<p>There are no workarounds that address this vulnerability.</p>
+This advisory is available at the following link: <br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171004-asa1"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20171004-asa1</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2017-07-27T16:00:00-0700,Multiple Cisco Products OSPF LSA Manipulation Vulnerability,Medium,"Multiple Cisco products are affected by a vulnerability involving the Open Shortest Path First (OSPF) Routing Protocol Link State Advertisement (LSA) database. This vulnerability could allow an unauthenticated, remote attacker to take full control of the OSPF Autonomous System (AS) domain routing table, allowing the attacker to intercept or black-hole traffic.<br />
+<br />
+The attacker could exploit this vulnerability by injecting crafted OSPF packets. Successful exploitation could cause the targeted router to flush its routing table and propagate the crafted OSPF LSA type 1 update throughout the OSPF AS domain.<br />
+<br />
+To exploit this vulnerability, an attacker must accurately determine certain parameters within the LSA database on the target router. This vulnerability can only be triggered by sending crafted unicast or multicast OSPF LSA type 1 packets. No other LSA type packets can trigger this vulnerability.<br />
+<br />
+The Fabric Shortest Path First (FSPF) protocol is not affected by this vulnerability.<br /><br />
+Workarounds that address this vulnerability are available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170727-ospf"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170727-ospf</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.2
+2017-08-02T16:00:00-0700,Cisco Adaptive Security Appliance Authenticated Cross-Site Scripting Vulnerability,Medium,"A vulnerability in the web-based management interface of Cisco&nbsp;Adaptive Security Appliance&nbsp;(ASA) could allow an authenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device.<br />
+<br />
+The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive browser-based information.<br />
+<br />
+Additional information about XSS attacks and potential mitigations can be found at:
+<ul>
+    <li><a href=""https://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"">https://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss</a></li>
+    <li><a href=""https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)"">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>
+</ul>
+There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170802-asa"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170802-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.4
+2017-08-02T16:00:00-0700,Cisco Adaptive Security Appliance WebVPN Cross-Site Scripting Vulnerability,Medium,"A vulnerability in the web-based management interface of Cisco&nbsp;Adaptive Security Appliance&nbsp;(ASA) could allow an unauthenticated, remote attacker to conduct a cross-site scripting (XSS) attack against a user of the web-based management interface of an affected device.<br />
+<br />
+The vulnerability is due to insufficient validation of user-supplied input by the web-based management interface of an affected device. An attacker could exploit this vulnerability by persuading a user of the interface to click a crafted link. A successful exploit could allow the attacker to execute arbitrary script code in the context of the interface or allow the attacker to access sensitive browser-based information.<br />
+<br />
+Additional information about XSS attacks and potential mitigations can be found at:<br />
+<ul>
+    <li><a href=""https://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss"">https://tools.cisco.com/security/center/content/CiscoAppliedMitigationBulletin/cisco-amb-20060922-understanding-xss</a></li>
+    <li><a href=""https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)"">https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)</a></li>
+</ul>
+There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170802-asa1"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170802-asa1</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2017-08-02T16:00:00-0700,Cisco Adaptive Security Appliance Username Enumeration Information Disclosure Vulnerability,Medium,"A vulnerability in the web interface of the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to determine valid usernames. The attacker could use this information to conduct additional reconnaissance attacks.<br />
+<br />
+The vulnerability is due to the interaction between Lightweight Directory Access Protocol (LDAP) and SSL Connection Profile when they are configured together. An attacker could exploit the vulnerability by performing a username enumeration attack to the IP address of the device. An exploit could allow the attacker to determine valid usernames.<br />
+<br />
+There are workarounds that address this vulnerability. <br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170802-asa2"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170802-asa2</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.3
+2017-04-19T16:00:00-0700,Cisco ASA Software DNS Denial of Service Vulnerability,High,"A vulnerability in the DNS code of Cisco&nbsp;ASA Software could allow an unauthenticated, remote attacker to cause an affected device to reload or corrupt the information present in the device's local
+DNS cache.<br />
+<br />
+The vulnerability is due to a flaw in handling crafted DNS response
+messages. An attacker could exploit this vulnerability by triggering a DNS request from the Cisco&nbsp;ASA Software and replying with a crafted response. A successful exploit
+could cause the device to reload, resulting in a denial of service
+(DoS) condition or corruption of the local DNS cache information.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected device can
+be used to exploit this vulnerability. This vulnerability affects Cisco&nbsp;ASA Software configured in routed or transparent firewall mode and
+single or multiple context mode. This vulnerability can be triggered by
+IPv4 and IPv6 traffic.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-dns"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-dns</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.1
+2017-04-19T16:00:00-0700,Cisco ASA Software IPsec Denial of Service Vulnerability,High,"A vulnerability in the IPsec code of Cisco&nbsp;ASA Software could allow an authenticated, remote attacker to cause a reload
+of the affected system.<br />
+<br />
+The vulnerability is due to improper
+parsing of malformed IPsec packets. An attacker could exploit this
+vulnerability by sending malformed IPsec packets to the affected system.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can
+be used to exploit this vulnerability. This vulnerability affects
+systems configured in routed firewall mode only and in single or
+multiple context mode. This vulnerability can be triggered by IPv4 and
+IPv6 traffic. An attacker needs to establish a valid IPsec tunnel before exploiting this vulnerability.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-ipsec"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-ipsec</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.7
+2017-04-19T16:00:00-0700,Cisco ASA Software and Cisco FTD Software TCP Normalizer Denial of Service Vulnerability,Medium,"A vulnerability in the TCP normalizer of Cisco Adaptive Security Appliance (ASA) Software and Cisco Firepower Threat Defense (FTD) Software could allow an unauthenticated, remote attacker to cause Cisco ASA and FTD to drop any further incoming traffic on all interfaces, resulting in a denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to improper limitation of the global out-of-order TCP queue for specific block sizes. An attacker could exploit this vulnerability by sending a large number of unique permitted TCP connections with out-of-order segments. An exploit could allow the attacker to exhaust available blocks in the global out-of-order TCP queue, causing the dropping of any further incoming traffic on all interfaces and resulting in a DoS condition.<br />
+<br />
+There are no workarounds that address this vulnerability.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-norm"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-norm</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.0
+2017-04-19T16:00:00-0700,Cisco ASA Software SSL/TLS Denial of Service Vulnerability,High,"A vulnerability in the Secure Sockets Layer (SSL) and Transport Layer Security (TLS)  code  of Cisco&nbsp;ASA Software could allow
+an unauthenticated, remote attacker to cause a reload of the affected
+system.<br />
+<br />
+The vulnerability is due to improper parsing of crafted
+SSL or TLS packets. An attacker could exploit this vulnerability by
+sending a crafted packet to the affected system.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can
+be used to exploit this vulnerability. This vulnerability affects
+systems configured in routed and transparent firewall mode and in single or
+multiple context mode. This vulnerability can be triggered by IPv4 and
+IPv6 traffic. A valid SSL or TLS session is needed to exploit this vulnerability.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-tls"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-tls</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.6
+2017-04-19T16:00:00-0700,Cisco ASA Software Internet Key Exchange Version 1 XAUTH Denial of Service Vulnerability,High,"A vulnerability in the Internet Key Exchange Version 1 (IKEv1) XAUTH code of Cisco&nbsp;ASA Software could allow
+an authenticated, remote attacker to cause a reload of an affected
+system.<br />
+<br />
+The vulnerability is due to insufficient validation of
+the IKEv1 XAUTH parameters passed during an IKEv1 negotiation. An attacker
+could exploit this vulnerability by sending crafted parameters.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can
+be used to exploit this vulnerability. This vulnerability only affects
+systems configured in routed firewall mode and in single or
+multiple context mode. This vulnerability can be triggered by IPv4 or
+IPv6 traffic. A valid IKEv1 Phase 1 needs to be established to exploit this vulnerability, which means that an attacker would need to have knowledge of a pre-shared key or have a valid certificate for phase 1 authentication.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-xauth"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170419-asa-xauth</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.7
+2017-04-05T16:00:00-0700,Cisco Firepower Detection Engine SSL Denial of Service Vulnerability,Medium,"A vulnerability in the detection engine that handles Secure Sockets Layer (SSL) packets for Cisco&nbsp;Firepower System Software could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition because the Snort process unexpectedly restarts.<br />
+<br />
+The vulnerability is due to improper error handling of an SSL packet in an established SSL connection. An attacker could exploit this vulnerability by sending a crafted SSL packet stream to the detection engine on the targeted device. An exploit could allow the attacker to cause a DoS condition if the Snort process restarts, causing traffic inspection to be bypassed or traffic to be dropped.<br />
+<br />
+There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170405-cfpw1"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170405-cfpw1</a>","[u'Cisco Firepower Threat Defense Software ', u'Cisco FirePOWER Services Software for ASA ']",6.8
+2017-03-15T16:00:00-0700,Cisco Adaptive Security Appliance BGP Bidirectional Forwarding Detection ACL Bypass Vulnerability,Medium,"A vulnerability in the Border Gateway Protocol (BGP) Bidirectional Forwarding Detection (BFD) implementation of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to bypass the access control list (ACL) for specific TCP and UDP traffic.<br />
+<br />
+The vulnerability occurs because the BFD implementation incorrectly allows traffic with destination ports 3784 and 3785 through the interface ACLs. An attacker could exploit this vulnerability by sending TCP or UDP packets with a destination port of 3784 or 3785 through the ASA.<br />
+<br />
+Workarounds that address this vulnerability are available.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170315-asa"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170315-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.8
+2017-02-08T16:00:00-0800,Cisco ASA Clientless SSL VPN CIFS Heap Overflow Vulnerability,High,"A vulnerability in Common Internet Filesystem (CIFS) code in the
+Clientless SSL VPN functionality of Cisco ASA Software could allow an
+authenticated, remote attacker to cause a heap overflow.<br />
+<br />
+The
+vulnerability is due to insufficient validation of user supplied input. An attacker could
+exploit this vulnerability by sending a crafted URL to the affected
+system. An exploit could allow the remote attacker to cause a reload of the
+affected system or potentially execute code.<br />
+<strong><br />
+Note:</strong> Only traffic directed to the affected system can
+be used to exploit this vulnerability. This vulnerability affects
+systems configured in routed firewall mode only and in single or
+multiple context mode. This vulnerability can be triggered by IPv4 or
+IPv6 traffic. A valid TCP connection is needed to perform the attack. The attacker needs to have valid credentials to log in to the Clientless SSL VPN portal.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are available.
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170208-asa"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170208-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],8.8
+2013-08-01T16:00:00-0700,OSPF LSA Manipulation Vulnerability in Multiple Cisco Products,Medium,"Multiple Cisco products are affected by a vulnerability involving the Open Shortest Path First (OSPF) Routing Protocol Link State Advertisement (LSA) database. This vulnerability could allow an unauthenticated attacker to take full control of the OSPF Autonomous System (AS) domain routing table, blackhole traffic, and intercept traffic.<br />
+<br />
+The attacker could trigger this vulnerability by injecting crafted OSPF packets. Successful exploitation could cause flushing of the routing table on a targeted router, as well as propagation of the crafted OSPF LSA type 1 update throughout the OSPF AS domain.<br />
+<br />
+To exploit this vulnerability, an attacker must accurately determine certain parameters within the LSA database on the target router. This vulnerability can only be triggered by sending crafted unicast or multicast LSA type 1 packets. No other LSA type packets can trigger this vulnerability.<br />
+<br />
+OSPFv3 is not affected by this vulnerability. Fabric Shortest Path First (FSPF) protocol is not affected by this vulnerability.<br />
+<br />
+Workarounds that address this vulnerability are available.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130801-lsaospf"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20130801-lsaospf</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.8
+2017-01-25T16:00:00-0800,Cisco Adaptive Security Appliance CX Context-Aware Security Denial of Service Vulnerability,High,"A vulnerability in the data plane IP fragment handler of the Adaptive Security Appliance (ASA) CX Context-Aware Security module could allow an unauthenticated, remote attacker to cause the CX module to be unable to process further traffic, resulting in a denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to improper handling of IP fragments. An attacker could exploit this vulnerability by sending crafted fragmented IP traffic across the CX module. An exploit could allow the attacker to exhaust free packet buffers in shared memory (SHM), causing the CX module to be unable to process further traffic, resulting in a DoS condition.<br />
+<br />
+Cisco has not released and will not release software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170125-cas"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20170125-cas</a>",[u'Cisco ASA CX Context-Aware Security Software '],8.6
+2016-12-07T16:00:00-0800,Cisco FirePOWER Malware Protection Bypass Vulnerability,Medium,"A vulnerability in TCP processing in Cisco FirePOWER system software could allow an unauthenticated, remote attacker to download files that would normally be blocked.<br />
+<br />
+The vulnerability is due to out-of-order TCP segments (retransmissions out of the current window, which have already been acknowledged) not being properly processed before being passed to HTTP inspection, which for GZIP compressed streams causes GZIP decompression to fail. This results in an incorrect SHA-256 hash being calculated and potential malware not being detected. An attacker could exploit this vulnerability by tricking a user into downloading a file containing malware via HTTP from a specifically prepared server. An exploit could allow the attacker to bypass the malware protection provided by the FirePOWER system software.<br />
+<br />
+Workarounds that address this vulnerability are not available.<br />
+<br />
+This advisory is available at the following link: <a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161207-fpwr"">https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161207-fpwr</a>","[u'Cisco Firepower Threat Defense Software ', u'Cisco FirePOWER Services Software for ASA ']",4.3
+2016-05-04T19:30:00-0700,Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: May 2016 ,Medium,"On May 3, 2016, the OpenSSL Software Foundation released a security advisory that included six vulnerabilities. Of the six vulnerabilities disclosed, four of them may cause memory corruption or excessive memory usage, one could allow a padding oracle attack to decrypt traffic when the connection uses an AES CBC cipher and the server supports AES-NI, and, lastly, one is specific to a product performing an operation with<em> </em>Extended Binary Coded Decimal Interchange Code (EBCDIC) encoding.<br />
+<br />
+Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities. <br />
+<br />
+This advisory will be updated as additional information becomes available.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160504-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160504-openssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",NA
+2016-11-16T16:00:00-0800,Cisco ASA Input Validation File Injection Vulnerability,Medium,"A vulnerability in the HTTP web-based management interface of the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to inject arbitrary XML commands on the affected system.<br />
+<br />
+The vulnerability is due to improper user input validation. An attacker could exploit this vulnerability by crafting XML input into the affected fields of the web interface. An exploit could allow the attacker to impact the integrity of the device data.<br />
+<br />
+There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161116-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161116-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.3
+2016-10-19T16:00:00-0700,Cisco ASA Software Identity Firewall Feature Buffer Overflow Vulnerability,Critical,"A vulnerability in the Identity Firewall feature of Cisco ASA Software could allow an unauthenticated, remote attacker to cause a reload of the affected system or to remotely execute code. <br />
+<br />
+The vulnerability is due to a buffer overflow in the affected code area. An attacker could exploit this vulnerability by sending a crafted NetBIOS packet in response to a NetBIOS probe sent by the ASA software. An exploit could allow the attacker to execute arbitrary code and obtain full control of the system or cause a reload of the affected system.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can be used to exploit this vulnerability. This vulnerability affects systems configured in routed and transparent firewall mode and in single or multiple context mode. This vulnerability can be triggered by IPv4 traffic.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There is a workaround that addresses this vulnerability.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-asa-idfw"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-asa-idfw</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],9.3
+2016-10-19T16:00:00-0700,Cisco ASA Software Local Certificate Authority Denial of Service Vulnerability,High,"A vulnerability in the local Certificate Authority (CA) feature of Cisco ASA Software could allow an unauthenticated, remote attacker to cause a reload of the affected system.<br />
+<br />
+The vulnerability is due to improper handling of crafted packets during the enrollment operation. An attacker could exploit this vulnerability by sending a crafted enrollment request to the affected system. An exploit could allow the attacker to cause the reload of the affected system.<br />
+<br />
+<strong>Note:</strong> Only HTTPS packets directed to the Cisco ASA
+interface, where the local CA is allowing user enrollment, can be used to trigger this
+vulnerability. This vulnerability affects
+systems configured in routed firewall mode and in single
+or
+multiple context mode. <br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-asa-ca"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161019-asa-ca</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.1
+2016-10-05T16:00:00-0700,Cisco ASA Software DHCP Relay Denial of Service Vulnerability,Medium,"A vulnerability in the DHCP Relay feature of Cisco ASA Software could allow an unauthenticated, adjacent attacker to cause a denial of service (DoS) condition by causing an interface wedge.<br />
+<br />
+The vulnerability is due to improper handling of resources linked with the DHCP Relay feature. An attacker could exploit this vulnerability by sending DHCP packets at specific rates. An exploit could allow an attacker to cause an interface to become wedged, and stop processing incoming traffic. Once this state is reached, restoration of service can only be achieved by reloading the device.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-asa-dhcp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20161005-asa-dhcp</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2015-12-04T17:38:00-0800,Multiple Vulnerabilities in OpenSSL (December 2015) Affecting Cisco Products,Medium,"On December 3, 2015, the OpenSSL Project released a security advisory detailing five vulnerabilities.<br />
+<br />
+Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition.&nbsp;<br />
+<br />
+This advisory will be updated as additional information becomes available.<br />
+<br />
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that mitigate these vulnerabilities are not available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151204-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151204-openssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",NA
+2016-08-17T18:45:00-0700,Cisco Adaptive Security Appliance SNMP Remote Code Execution Vulnerability,High,"A vulnerability in the Simple Network Management Protocol (SNMP) code of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, remote attacker to cause a reload of the affected system or to remotely execute code.<br />
+<br />
+The vulnerability is due to a buffer overflow in the affected code area. The vulnerability affects all versions of SNMP (versions 1, 2c, and 3) when enabled on a virtual or physical Cisco ASA device. An attacker could exploit this vulnerability by sending crafted SNMP packets to an SNMP-enabled interface on the affected system. An exploit could allow the attacker to execute arbitrary code and obtain full control of the system or to cause a reload of the affected system. The attacker must know the SNMP community string to exploit this vulnerability.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can be used to exploit this vulnerability. This vulnerability affects systems configured in routed and transparent firewall mode only and in single or multiple context mode. This vulnerability can be triggered by IPv4 traffic only. The attacker requires knowledge of the configured SNMP community string in SNMP version 1 and SNMP version 2c or a valid username and password for SNMP version 3.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Mitigations are listed in the Workarounds section of this advisory.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160817-asa-snmp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160817-asa-snmp</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA 1000V Cloud Firewall Software ', u'Cisco Firepower Threat Defense Software ', u'Cisco FirePOWER Services Software for ASA ']",8.5
+2016-05-25T16:00:00-0700,Cisco Products IPv6 Neighbor Discovery Crafted Packet Denial of Service Vulnerability,High,"A vulnerability in the IP Version 6 (IPv6) packet processing functions of multiple Cisco products could allow an unauthenticated, remote attacker to cause an affected device to stop processing IPv6 traffic, leading to a denial of service (DoS) condition on the device.<br />
+<br />
+The vulnerability is due to insufficient processing logic for crafted IPv6 packets that are sent to an affected device. An attacker could exploit this vulnerability by sending crafted IPv6 Neighbor Discovery (ND) packets to an affected device for processing. A successful exploit could allow the attacker to cause the device to stop processing IPv6 traffic, leading to a DoS condition on the device.<br />
+<br />
+This vulnerability is not Cisco specific: any IPv6 processing unit not capable of dropping such packets early in the processing path or in hardware is affected by this vulnerability.<br />
+<br />
+Cisco will release software updates that address this vulnerability.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160525-ipv6"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160525-ipv6</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.0
+2013-02-26T15:52:21-0800,Cisco Adaptive Security Appliance Xlates Table Exhaustion Vulnerability,Medium,"Cisco Adaptive Security Appliance (ASA) Software contains a vulnerability that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition. <br />
+<br />
+The vulnerability is due to the improper implementation of the Network Address Translation (NAT) process by the affected software. An unauthenticated, remote attacker could exploit this vulnerability by sending crafted packets to the targeted device. If successful, an attacker could cause a delay in new valid connections until the invalid entries expire, resulting in a DoS condition.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability. However, mitigations for this vulnerability are available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130226-CVE-2013-1138"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/Cisco-SA-20130226-CVE-2013-1138</a><br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.0
+2016-08-17T18:45:00-0700,Cisco Adaptive Security Appliance CLI Remote Code Execution Vulnerability,Medium,"A vulnerability in the command-line interface (CLI) parser of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, local attacker to create a denial of service (DoS) condition or potentially execute arbitrary code. An attacker could exploit this vulnerability by invoking certain invalid commands in an affected device.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability. This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160817-asa-cli"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160817-asa-cli</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.8
+2016-07-11T09:30:00-0700,Cisco Adaptive Security Appliance Access Control List ICMP Echo Request Code Filtering Vulnerability,Medium,"A vulnerability in the Cisco&nbsp;Adaptive Security Appliance&nbsp;(ASA) Software implementation of access control list (ACL) permit and deny filters for ICMP echo reply messages could allow an unauthenticated, remote attacker to bypass ACL configurations for an affected device. ICMP traffic that should be denied may instead be allowed through an affected device.<br />
+<br />
+The vulnerability is due to the implementation of ACL-based filters for ICMP echo requests and the range of ICMP echo request subtypes. An attacker could exploit this vulnerability by sending ICMP echo request traffic to an affected device. A successful exploit could allow the attacker to bypass ACL configurations for the device, which could allow traffic that should be denied to instead be allowed through the device.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160711-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160711-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.3
+2016-06-03T16:00:00-0700,Multiple Vulnerabilities in Network Time Protocol Daemon Affecting Cisco Products: June 2016,High,"Multiple Cisco products incorporate a version of the Network Time Protocol daemon (ntpd) package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or modify the time being advertised by a device acting as a Network Time Protocol (NTP) server.<br />
+<br />
+On June 2, 2016, the NTP Consortium of the Network Time Foundation released a security notice that details five issues regarding DoS vulnerabilities and logic issues that may allow an attacker to shift a system's time.&nbsp;<br />
+<br />
+The new vulnerabilities disclosed in this document are as follows:<br />
+<br />
+<ul>
+    <li>Network Time Protocol CRYPTO-NAK Denial of Service Vulnerability</li>
+    <li>Network Time Protocol Bad Authentication Demobilizes Ephemeral Associations Vulnerability</li>
+    <li>Network Time Protocol Processing Spoofed Server Packets Vulnerability</li>
+    <li>Network Time Protocol Autokey Association Reset Vulnerability</li>
+    <li>Network Time Protocol Broadcast Interleave Vulnerability</li>
+</ul>
+Additional details about each vulnerability are in the&nbsp;<a href=""http://support.ntp.org/bin/view/Main/SecurityNotice#April_2016_NTP_4_2_8p7_Security"">NTP Consortium Security Notice</a>.<br />
+<br />
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that address one or more of these vulnerabilities may be available and will be documented in the Cisco bug for each affected product.<br />
+<br />
+This advisory is available at the following link:&nbsp;<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160603-ntpd"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160603-ntpd</a><br />",[u'Cisco ASA CX Context-Aware Security Software '],NA
+2016-03-02T12:30:00-0800,Multiple Vulnerabilities in OpenSSL Affecting Cisco Products: March 2016,Medium,"On March 1, 2016, the OpenSSL Software Foundation released a security advisory detailing seven vulnerabilities and a new attack, referred to as the <em>Decrypting RSA with Obsolete and Weakened eNcryption (DROWN)</em> attack. A total of eight Common Vulnerabilities and Exposures (CVEs) were assigned. Of the eight CVEs, three relate to the DROWN attack. The remaining CVEs track low severity vulnerabilities.<br />
+<br />
+DROWN is a cross-protocol attack that actively exploits weaknesses in SSL Version 2 (SSLv2) to decrypt passively collected Transport Layer Security (TLS) sessions. DROWN does not exploit a vulnerability in the TLS protocol or any specific implementation of the protocol.<br />
+<br />
+To execute a successful DROWN attack, the attacker must identify a server that supports both SSLv2 and TLS, and uses the same RSA key pair for both protocols. The attacker must also be able to collect TLS traffic for the server.
+<br />
+<br />
+This advisory will be updated as additional information becomes available.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160302-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160302-openssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",NA
+2016-02-10T16:00:00-0800,Cisco ASA Software IKEv1 and IKEv2 Buffer Overflow Vulnerability,Critical,"A vulnerability in the Internet Key Exchange (IKE) version 1 (v1)
+and IKE version 2 (v2) code of Cisco ASA Software could allow an unauthenticated,
+remote attacker to cause a reload of the affected system or to remotely
+execute code. <br />
+<br />
+The vulnerability is due to a buffer overflow in
+the affected code area. An attacker could exploit this vulnerability by
+sending crafted UDP packets to the affected system. An exploit
+could allow the attacker to execute arbitrary code and obtain full
+control of the system or to cause a reload of the affected system.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can
+be used to exploit this vulnerability. This vulnerability affects
+systems configured in routed firewall mode only and in single or
+multiple context mode. This vulnerability can be triggered by IPv4 and
+IPv6 traffic.<br />
+<br />
+Cisco has released software updates that address this vulnerability.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160210-asa-ike"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160210-asa-ike</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],10.0
+2016-05-17T14:00:00-0700,Cisco Adaptive Security Appliance VPN Memory Block Exhaustion Vulnerability,Medium,"A vulnerability in the IPsec code of Cisco&nbsp;Adaptive Security Appliance&nbsp;(ASA) Software could allow an authenticated, remote attacker to cause the depletion of a memory block, which may cause the system to stop forwarding traffic and result in a denial of service (DoS) condition.<br />
+<br />
+The vulnerability is due to an error in the implementation of ICMP error handling for IPsec packets. An attacker could exploit this vulnerability by sending crafted packets through an established LAN-to-LAN or Remote Access VPN tunnel. A successful exploit could allow the attacker to deplete available memory and cause system instability or cause the system to stop forwarding traffic.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160517-asa-vpn"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160517-asa-vpn</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.3
+2016-05-17T00:00:00-0700,Cisco Adaptive Security Appliance XML Parser Denial of Service Vulnerability,Medium,"A vulnerability in XML parser code of Cisco Adaptive Security Appliance Software could allow an authenticated, remote attacker to cause system instability or a reload of the affected system.<br />
+<br />
+The vulnerability is due to insufficient hardening of the XML parser configuration. An attacker could exploit this vulnerability in multiple ways by utilizing a malicious file. An attacker with administrative privileges could exploit this by uploading a malicious XML file on the system and trigger the XML code to parse the malicious file. Additionally, an attacker with Clienteles SSL VPN access could exploit this vulnerability by sending a crafted XML file. An exploit would allow the attacker to crash the XML parser process, which could cause system instability, memory exhaustion, and in some cases lead to a reload of the affected system.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that address this vulnerability are not available.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160517-asa-xml"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160517-asa-xml</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.8
+2016-04-28T09:00:00-0700,Multiple Vulnerabilities in Network Time Protocol Daemon Affecting Cisco Products: April 2016,Medium,"Multiple Cisco products incorporate a version of the Network Time Protocol daemon (ntpd) package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or modify the time being advertised by a device acting as a Network Time Protocol (NTP) server.<br />
+<br />
+On April 26, 2016, the NTP Consortium of the Network Time Foundation released a security notice that details 11 issues regarding DoS vulnerabilities, information disclosure vulnerabilities, and logic issues that may allow an attacker to shift a system's time. Two of the vulnerabilities disclosed in the NTP security notice address issues that were previously disclosed without a complete fix.<br />
+<br />
+The new vulnerabilities disclosed in this document are as follows:<br />
+<ul>
+    <li>CVE-2016-1547: Network Time Protocol CRYPTO-NAK Denial of Service Vulnerability</li>
+    <li>CVE-2016-1548: Network Time Protocol Interleave-Pivot Denial of Service Vulnerability</li>
+    <li>CVE-2016-1549: Network Time Protocol Sybil Ephemeral Association Attack Vulnerability</li>
+    <li>CVE-2016-1550: Network Time Protocol Improve NTP Security Against Buffer Comparison Timing Attacks</li>
+    <li>CVE-2016-1551: Network Time Protocol Refclock Impersonation Vulnerability</li>
+    <li>CVE-2016-2516: Network Time Protocol Duplicate IPs on Unconfig Directives Will Cause an Assertion Botch in ntpd</li>
+    <li>CVE-2016-2517: Network Time Protocol Remote Configuration Trustedkey/Requestkey/Controlkey Values Are Not Properly Validated</li>
+    <li>CVE-2016-2518: Network Time Protocol Crafted addpeer Causes Array Wraparound with MATCH_ASSOC</li>
+    <li>CVE-2016-2519: Network Time Protocol Remote ctl_getitem() Return Value Not Always Checked</li>
+</ul>
+The two vulnerabilities that were previously disclosed without a complete fix are as follows:<br />
+<ul>
+    <li>CVE-2015-8138:&nbsp;Network Time Protocol Zero Origin Timestamp Bypass</li>
+    <li>CVE-2015-7704:&nbsp;Network Time Protocol Packet Processing Denial of Service Vulnerability</li>
+</ul>
+Those vulnerabilities were disclosed by Cisco in the following Cisco Security Advisories:<br />
+<ul>
+    <li>
+    <a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-ntp"">Multiple Vulnerabilities in ntpd Affecting Cisco Products - October 2015</a></li>
+    <li>
+    <a href=""https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160127-ntpd"">Multiple Vulnerabilities in Network Time Protocol Daemon Affecting Cisco Products: January 2016</a></li>
+</ul>
+Additional details about each vulnerability are in the <a href=""http://support.ntp.org/bin/view/Main/SecurityNotice#April_2016_NTP_4_2_8p7_Security"">NTP Consortium Security Notice</a>.<br />
+<br />
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that address one or more of these vulnerabilities may be available and will be documented in the Cisco bug for each affected product.<br />
+<br />
+This advisory is available at the following link: <br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160428-ntpd"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160428-ntpd</a><br />
+<br />",[u'Cisco ASA CX Context-Aware Security Software '],NA
+2016-04-20T16:00:00-0700,Multiple Cisco Products libSRTP Denial of Service Vulnerability,High,"Cisco released version 1.5.3 of the Secure Real-Time Transport Protocol (SRTP) library (libSRTP), which addresses a denial of service (DoS) vulnerability. Multiple Cisco products incorporate a vulnerable version of the libSRTP library.<br />
+<br />
+The vulnerability is in the encryption processing subsystem of libSRTP and could allow an unauthenticated, remote attacker to trigger a DoS condition. The vulnerability is due to improper input validation of certain fields of SRTP packets. An attacker could exploit this vulnerability by sending a crafted SRTP packet designed to trigger the issue to an affected device.<br />
+<br />
+The impact of this vulnerability on Cisco products may vary depending on the affected product. Details about the impact on each product are outlined in the ""Conditions"" section of each Cisco bug for this vulnerability. The bug IDs are listed at the top of this advisory and in the table in ""Vulnerable Products.""<br />
+<br />
+This advisory is available at the following link: <br />
+<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160420-libsrtp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160420-libsrtp</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.8
+2016-05-04T16:00:00-0700,Cisco Adaptive Security Appliance with FirePOWER Services Kernel Logging Denial of Service Vulnerability,High,"A vulnerability in the kernel logging configuration for Firepower System Software for the Adaptive Security Appliance (ASA) 5585-X FirePOWER Security Services Processor (SSP) module could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition due to high consumption of system resources.&nbsp;<br />
+<br />
+The vulnerability is due to the logging of certain IP packets. An attacker could exploit this vulnerability by sending a flood of specially crafted IP packets to the affected device. An exploit could allow the attacker to cause the Cisco FirePOWER module to cease inspecting traffic or go offline.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.
+<br />
+<br />
+This advisory is available at the following link:<br />
+<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160504-fpkern"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160504-fpkern</a>",[u'Cisco ASA with FirePOWER Services '],7.8
+2016-04-20T16:00:00-0700,Cisco Adaptive Security Appliance Software DHCPv6 Relay Denial of Service Vulnerability,High,"A vulnerability in the DHCPv6 relay feature of Cisco&nbsp;Adaptive Security Appliance&nbsp;(ASA) Software could allow an unauthenticated, remote attacker to cause an affected device to reload.<br />
+<br />
+The vulnerability is due to insufficient validation of DHCPv6 packets. An attacker could exploit this vulnerability by sending crafted DHCPv6 packets to an affected device, resulting in a denial of service (DoS) condition.<br />
+<br />
+This vulnerability affects systems configured in routed firewall mode and in single or multiple context mode. Cisco&nbsp;ASA Software is affected by this vulnerability only if the software is configured with the DHCPv6 relay feature. The vulnerability is triggered only by IPv6 traffic.<br />
+<br />
+This vulnerability affects Cisco&nbsp;ASA Software release 9.4.1 only.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160420-asa-dhcpv6"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160420-asa-dhcpv6</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.8
+2016-03-30T16:00:00-0700,Cisco Firepower Malware Block Bypass Vulnerability,High,"A vulnerability in the malicious file detection and blocking features of Cisco Firepower System Software could allow an unauthenticated, remote attacker to bypass malware detection mechanisms on an affected system.<br />
+<br />
+The vulnerability is due to improper input validation of fields in HTTP headers. An attacker could exploit this vulnerability by sending a crafted HTTP request to an affected system. A successful exploit could allow the attacker to bypass malicious file detection or blocking policies that are configured for the system, which could allow malware to pass through the system undetected.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that address this vulnerability.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160330-fp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160330-fp</a>",[u'Cisco ASA with FirePOWER Services '],5.0
+2016-03-09T16:00:00-0800,Cisco ASA Content Security and Control Security Services Module Denial of Service Vulnerability,High,"A vulnerability in the HTTPS inspection engine of the Cisco ASA Content Security and Control Security Services Module (CSC-SSM) could allow an unauthenticated, remote attacker to cause exhaustion of available memory, system instability, and a reload of the affected system. <br />
+<br />
+The vulnerability is due to improper handling of HTTPS packets transiting through the affected system. An attacker could exploit this vulnerability by sending HTTPS packets through the affected system at high rate.&nbsp;<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160309-csc"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160309-csc</a>",[u'Cisco ASA 5500 Series CSC-SSM '],7.8
+2016-01-27T20:00:00-0800,Multiple Vulnerabilities in Network Time Protocol Daemon Affecting Cisco Products: January 2016,Medium,"Multiple Cisco products incorporate a version of the Network Time Protocol daemon (ntpd) package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to create a denial of service (DoS) condition or modify the time being advertised by a device acting as a Network Time Protocol (NTP) server.<br />
+<br />
+On January 19, 2016, NTP Consortium at Network Time Foundation released a security advisory detailing 12 issues regarding multiple DoS vulnerabilities, information disclosure vulnerabilities, and logic issues that may allow an attacker to shift a client's time. The vulnerabilities covered in this document are as follows:<br />
+<ul>
+    <li>CVE-2015-7973: Network Time Protocol Replay Attack on Authenticated Broadcast Mode Vulnerability </li>
+    <li>CVE-2015-7974: Network Time Protocol Missing Trusted Key Check</li>
+    <li>CVE-2015-7975: Standard Network Time Protocol Query Program nextvar() Missing Length Check</li>
+    <li>CVE-2015-7976: Standard Network Time Protocol Query Program saveconfig Command Allows Dangerous Characters in Filenames</li>
+    <li>CVE-2015-7978: Network Time Protocol Daemon reslist NULL Pointer Deference Denial of Service Vulnerability</li>
+    <li>CVE-2015-7977: Network Time Protocol Stack Exhaustion Denial of Service</li>
+    <li>CVE-2015-7979: Network Time Protocol Off-Path Broadcast Mode Denial of Service </li>
+    <li>CVE-2015-8138: Network Time Protocol Zero Origin Timestamp Bypass</li>
+    <li>CVE-2015-8139: Network Time Protocol Information Disclosure of Origin Timestamp</li>
+    <li>CVE-2015-8140: Standard Network Time Protocol Query Program Replay Attack</li>
+    <li>CVE-2015-8158: Standard and Special Network Time Protocol Query Program Infinite loop</li>
+</ul>
+Additional details on each of the vulnerabilities are in the official security advisory from the NTP Consortium at Network Time Foundation at the following link: <a href=""http://nwtime.org/security-policy/"">Security Notice</a><br />
+<br />
+Cisco has released software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that address some of these vulnerabilities may be available. Available workarounds will be documented in the corresponding Cisco bug for each affected product.&nbsp;<br />
+<br />
+This advisory is available at the following link:<br />
+http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160127-ntpd <br />",[u'Cisco ASA CX Context-Aware Security Software '],5.0
+2016-01-15T22:23:00-0800,Cisco Adaptive Security Appliance Information Disclosure Vulnerability,Medium,"A vulnerability in the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to access sensitive data, including the ASA Software version that is currently running on the appliance.<br />
+<br />
+The vulnerability occurs because the Cisco ASA does not sufficiently protect sensitive data during a Cisco AnyConnect client authentication attempt. An attacker could exploit the vulnerability by attempting to authenticate to the Cisco ASA with AnyConnect.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160115-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160115-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.0
+2016-02-03T16:00:00-0800,Cisco ASA-CX and Cisco Prime Security Manager Privilege Escalation Vulnerability,High,"A vulnerability in the role-based access control of Cisco ASA-CX and&nbsp;Cisco Prime Security Manager (PRSM) could allow an authenticated, remote attacker to change the password of any user on the system.<br />
+<br />
+The vulnerability exists because the password change request is not fully qualified. An authenticated attacker with a user role other than <em>Administrator </em>could exploit this vulnerability by sending a specially crafted HTTP request to the Cisco PRSM. An exploit could allow the attacker to change the password of any user on the system, including users with the <em>Administrator </em>role.<br /><br />
+Cisco has released software updates that address this vulnerability. <br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160203-prsm"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160203-prsm</a><br />",[u'Cisco ASA CX Context-Aware Security Software '],8.5
+2015-10-21T23:00:00-0700,Multiple Vulnerabilities in ntpd Affecting Cisco Products - October 2015,Medium,"Multiple Cisco products incorporate a version of the ntpd package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to create a denial of service (DoS) condition or modify the time being advertised by a device acting as a network time protocol (NTP) server.<br />
+<br />
+On October 21st, 2015, NTP.org released a security advisory detailing 13 issues regarding multiple DoS vulnerabilities, information disclosure vulnerabilities, and logic issues that may result in an attacker gaining the ability to modify an NTP server's advertised time. The vulnerabilities covered in this document are as follows:&nbsp;<br />
+<ul>
+    <li>CVE-2015-7691 -&nbsp;Denial of Service AutoKey Malicious Message</li>
+    <li>CVE-2015-7692 -&nbsp;Denial of Service AutoKey Malicious Message</li>
+    <li>CVE-2015-7701 - Denial of Service CRYPTO_ASSOC Memory Leak</li>
+    <li>CVE-2015-7702 - Denial of Service AutoKey Malicious Message</li>
+    <li>CVE-2015-7703 - Configuration Directive File Overwrite Vulnerability</li>
+    <li>CVE-2015-7704 -&nbsp;Denial of Service by Spoofed Kiss-o'-Death</li>
+    <li>CVE-2015-7705 -&nbsp;Denial of Service by Priming the Pump</li>
+    <li>CVE-2015-7848 -&nbsp;Network Time Protocol ntpd Multiple Integer Overflow Read Access Violations</li>
+    <li>CVE-2015-7849 -&nbsp;Network Time Protocol Trusted Keys Memory Corruption Vulnerability</li>
+    <li>CVE-2015-7850 -&nbsp;Network Time Protocol Remote Configuration Denial of Service Vulnerability</li>
+    <li>CVE-2015-7851 -&nbsp;Network Time Protocol ntpd saveconfig Directory Traversal Vulnerability</li>
+    <li>CVE-2015-7852 -&nbsp;Network Time Protocol ntpq atoascii Memory Corruption Vulnerability</li>
+    <li>CVE-2015-7853 -&nbsp;Network Time Protocol Reference Clock Memory Corruption Vulnerability</li>
+    <li>CVE-2015-7854 -&nbsp;Network Time Protocol Password Length Memory Corruption Vulnerability</li>
+    <li>CVE-2015-7855 - Denial of Service Long Control Packet Message&nbsp;</li>
+    <li>CVE-2015-7871 -&nbsp;NAK to the Future: NTP Symmetric Association Authentication Bypass Vulnerability</li>
+</ul>
+Additional details on each of the vulnerabilities can be found at the following links:<br />
+<br />
+Official Security Advisory from ntp.org: <a href=""http://support.ntp.org/bin/view/Main/SecurityNotice#Recent_Vulnerabilities"">Security Notice</a><br />
+Boston University:&nbsp;<a href=""http://www.cs.bu.edu/~goldbe/NTPattack.html"">Attacking the Network Time Protocol</a><br />
+Cisco TALOS: <a href=""http://talosintel.com/vulnerability-reports/"">TALOS Vulnerability Reports</a><br />
+<br />
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that mitigate one or more of the vulnerabilities may be available for certain products, please see the individual Cisco Bug IDs for details.&nbsp;<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-ntp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-ntp</a>",[u'Cisco ASA CX Context-Aware Security Software '],6.4
+2016-01-11T00:00:00-0800,Cisco Adaptive Security Appliance Non-DCERPC Traffic Bypass Vulnerability,Medium,"A vulnerability in the Distributed Computing Environment/Remote Procedure Calls (DCERPC) Inspection feature of the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to send traffic that is not DCERPC between hosts configured only for DCERPC inspection. The DCERPC traffic should be allowed only on TCP port 135.<br />
+<br />
+The vulnerability is due to an internal access control list (ACL), which is used to allow DCERPC traffic but is incorrectly programmed to allow all traffic types and not restricted to DCERPC TCP port 135. An attacker could exploit this vulnerability by sending non-DCERPC traffic between hosts configured for DCERPC inspection that would normally be dropped. An exploit could allow the attacker to access hosts that should normally be restricted through the ASA.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160111-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20160111-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.3
+2015-03-20T20:20:00-0700,Multiple Vulnerabilities in OpenSSL (March 2015) Affecting Cisco Products,High,"Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service (DoS) condition or corrupt portions of OpenSSL process memory. On March 19, 2015, the OpenSSL Project released a security advisory detailing 13 distinct vulnerabilities. The following seven are actively under investigation and the vulnerabilities are referenced in this document as follows:<br />
+<br />
+<ul>
+    <li>CVE-2015-0286: OpenSSL ASN1_TYPE_cmp Denial of Service Vulnerability</li>
+    <li>CVE-2015-0287: OpenSSL ASN.1 Structure Reuse Memory Corruption Vulnerability</li>
+    <li>CVE-2015-0289: OpenSSL PKCS7 NULL Pointer Dereference Denial of Service Vulnerability</li>
+    <li>CVE-2015-0292: OpenSSL Base64 Decoding Memory Corruption Vulnerability</li>
+    <li>CVE-2015-0293: OpenSSL SSLv2 CLIENT-MASTER-KEY Denial of Service Vulnerability&nbsp;</li>
+    <li>CVE-2015-0209: OpenSSL Elliptic Curve d2i_ECPrivateKey Denial of Service Vulnerability</li>
+    <li>CVE-2015-0288: OpenSSL X.509 to PKCS#10 Denial of Service Vulnerability</li>
+</ul>
+<br />
+The following six vulnerabilities do not affect any Cisco products:<br />
+<ul>
+    <li>CVE-2015-0291: OpenSSL ClientHello sigalgs Denial of Service Vulnerability</li>
+    <li>CVE-2015-0290: OpenSSL Multiblock Denial of Service Vulnerability&nbsp;</li>
+    <li>CVE-2015-0207: OpenSSL DTLSv1_listen SSL Object Corruption Denial of Service Vulnerability</li>
+    <li>CVE-2015-0208: OpenSSL Invalid Probabilistic Signature Scheme Parameters Denial of Service Vulnerability&nbsp;</li>
+    <li>CVE-2015-1787: OpenSSL Empty ClientKeyExchange Denial of Service Vulnerability&nbsp;</li>
+    <li>CVE-2015-0285: OpenSSL Handshake with Unseeded PRNG Predictable Value Vulnerability&nbsp;</li>
+</ul>
+<br />
+This advisory will be updated as additional information becomes available.<br />
+<br />
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that mitigate these vulnerabilities may be available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150320-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150320-openssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",2.6
+2015-11-24T08:30:00-0800,Cisco ASA Management Interface XML Parser Denial of Service Vulnerability,Medium,"A vulnerability in the XML parser of the management interface in Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, remote attacker to cause system instability and possibly crash an affected system.<br />
+<br />
+The vulnerability is due to insufficient hardening of the XML parser code. An attacker could exploit this vulnerability by triggering the affected component to perform a read operation of a crafted XML file.<br />
+<br />
+Cisco has released software updates that address this vulnerability. There are no workarounds that mitigate this vulnerability.
+<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151123-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151123-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.8
+2015-04-08T16:00:00-0700,Multiple Vulnerabilities in ntpd (April 2015) Affecting Cisco Products,Medium,"Multiple Cisco products incorporate a version of the <em>ntpd</em> package. Versions of this package are affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to bypass authentication controls or to create a denial of service (DoS) condition.<br />
+<br />
+On April 7, 2015, NTP.org and US-CERT released a security advisory dealing with two issues regarding bypass of authentication controls. These vulnerabilities are referenced in this document as follows:<br />
+<ul>
+    <li>CVE-2015-1798: NTP Authentication bypass vulnerability</li>
+    <li>CVE-2015-1799: NTP Authentication doesn't protect symmetric associations against DoS attacks</li>
+</ul>
+Cisco has released software updates that address these vulnerabilities. <br />
+<br />
+Workarounds that mitigate these vulnerabilities are available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-ntpd"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-ntpd</a>",[u'Cisco ASA CX Context-Aware Security Software '],5.0
+2015-03-10T16:00:00-0700,Multiple Vulnerabilities in OpenSSL (January 2015) Affecting Cisco Products,Medium,"Multiple Cisco products incorporate a version of the OpenSSL package affected by one or more vulnerabilities that could allow an unauthenticated, remote attacker to cause a denial of service condition or perform a man-in-the-middle attack. On January 8, 2015, the OpenSSL Project released a security advisory detailing eight distinct vulnerabilities. The vulnerabilities are referenced in this document as follows:
+<ul>
+    <li>CVE-2014-3571: OpenSSL DTLS Message Processing Denial of Service Vulnerability</li>
+    <li>CVE-2015-0206: OpenSSL dtls1_buffer_record Function DTLS Message Processing Denial of Service Vulnerability</li>
+    <li>CVE-2014-3569: OpenSSL no-ssl3 Option NULL Pointer Dereference Vulnerability</li>
+    <li>CVE-2014-3572: OpenSSL Elliptic Curve Cryptographic Downgrade Vulnerability</li>
+    <li>CVE-2015-0204: OpenSSL RSA Temporary Key Cryptographic Downgrade Vulnerability</li>
+    <li>CVE-2015-0205: OpenSSL Diffie-Hellman Certificate Validation Authentication Bypass Vulnerability</li>
+    <li>CVE-2014-8275:&nbsp;OpenSSL Certificate Fingerprint Validation Vulnerability</li>
+    <li>CVE-2014-3570: OpenSSL BN_sql Function Incorrect Mathematical Results Issue</li>
+</ul>
+Cisco will release software updates that address these vulnerabilities.<br />
+<br />
+Workarounds that mitigate these vulnerabilities may be available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150310-ssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150310-ssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",5.0
+2015-10-21T16:00:00-0700,Cisco ASA Software DHCPv6 Relay Denial of Service Vulnerability,High,"<span class=""data2"">A vulnerability in the DHCPv6 relay feature of Cisco
+Adaptive Security Appliance (ASA) software could allow an
+unauthenticated, remote attacker to cause an affected
+device to reload.<br />
+<br />
+The vulnerability is due to insufficient validation of DHCPv6
+packets. Cisco ASA Software is affected by this vulnerability only if the software is configured with the DHCPv6 relay feature. An attacker could exploit this
+vulnerability by sending crafted DHCPv6 packets to an
+affected device.<br />
+</span><br /><br />
+<span id=""ctl00_MainBodyContainer_DgFields_ctl03_lblField""><strong>Note: </strong>Only DHCPv6 packets directed to the Cisco ASA
+interface where the DHCPv6 relay is enabled can be used to trigger this
+vulnerability. This vulnerability affects
+systems configured in routed or transparent firewall mode and in single
+or multiple
+context mode. This vulnerability can be triggered only by IPv6 traffic. <br />
+<br />
+This vulnerability is documented in Cisco bug IDs&nbsp;<a href=""https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus56252"">CSCus56252</a> (<a href=""http://tools.cisco.com/RPF/register/register.do"">registered</a> customers only) and <a href=""https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus57142"">CSCus57142</a> (<a href=""http://tools.cisco.com/RPF/register/register.do"">registered</a> customers only) and have been assigned CVE ID
+CVE-2015-6324.<br />
+<br />
+Cisco has released software updates that address this vulnerability.
+Workarounds that mitigate this vulnerability are not available. This
+advisory is available at the following link:<br />
+<a href=""http://tvce-stg.cisco.com/security/AIMS/http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dhcp1"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dhcp1</a></span>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.1
+2015-10-21T16:00:00-0700,Cisco ASA Software VPN ISAKMP Denial of Service Vulnerability,High,"A vulnerability in the Internet Key Exchange (IKE) version 1 (v1) code of Cisco Adaptive Security Appliance (ASA) Software could allow an
+unauthenticated, remote attacker to cause an affected
+system to reload.<br />
+<br />
+The vulnerability is due to improper handling of Internet Security Association and Key Management Protocol (ISAKMP) packets. An
+attacker could exploit this vulnerability by sending crafted UDP packets
+to the affected system. A successful exploit could allow the attacker to cause an affected system to reload.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected system can be used to exploit this vulnerability. This vulnerability affects systems configured in routed firewall mode only and in single or multiple context mode. This vulnerability can be triggered by IPv4 and IPv6 traffic. <br />
+<br />
+This vulnerability is documented in Cisco bug ID <a href=""https://bst.cloudapps.cisco.com/bugsearch/bug/CSCus94026"">CSCus94026</a> (<a href=""http://tools.cisco.com/RPF/register/register.do"">registered</a> customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2015-6327.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-ike"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-ike</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.8
+2015-10-21T16:00:00-0700,Cisco ASA Software DNS Denial of Service Vulnerability,High,"A vulnerability in the DNS code of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause an affected system to reload.<br />
+<br />
+The vulnerability is due to improper processing of DNS packets. An attacker could exploit this vulnerability by sending a crafted request to an affected Cisco ASA device to cause it to generate a DNS request packet. The attacker would need to spoof the reply packet with a crafted DNS response.<br />
+<br />
+<strong>Note:</strong> This vulnerability can be exploited only by traffic that is directed to the affected device. This vulnerability affects Cisco ASA Software configured in routed or transparent firewall mode and single or multiple context mode. This vulnerability can be triggered by IPv4 and IPv6 traffic.<br />
+<br />
+This vulnerability is documented in Cisco bug ID <a href=""https://bst.cloudapps.cisco.com/bugsearch/bug/CSCuu07799"">CSCuu07799</a> (<a href=""http://tools.cisco.com/RPF/register/register.do"">registered</a> customers only) and Common Vulnerabilities and Exposures (CVE) ID CVE-2015-6326.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dns2"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dns2</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.1
+2015-01-15T17:54:09-0800,Cisco ASA Software DHCPv6 Relay Denial of Service Vulnerability,High,"A vulnerability in the DHCPv6 relay feature of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, remote attacker to cause an affected device to reload.<br />
+<br />
+The vulnerability is due to insufficient validation of DHCPv6 packets. Cisco ASA Software is affected by this vulnerability only if the software is configured with the DHCPv6 relay feature. An attacker could exploit this vulnerability by sending crafted DHCPv6 packets to an affected device.<br />
+<br />
+<strong>Note:</strong> Only DHCPv6 packets directed to the Cisco ASA
+interface where the DHCPv6 relay feature is enabled can be used to trigger this
+vulnerability. This vulnerability affects
+systems configured in routed or transparent firewall mode and in single
+or multiple
+context mode. This vulnerability can be triggered only by IPv6 traffic. <br />
+<br />
+This vulnerability is documented in Cisco bug ID&nbsp;<a href=""https://bst.cloudapps.cisco.com/bugsearch/bug/CSCur45455"">CSCur45455</a> (<a href=""http://tools.cisco.com/RPF/register/register.do"">registered</a> customers only) and has been assigned CVE ID CVE-2015-0578.<br />
+<br />
+Cisco has released software updates that address this vulnerability.
+Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150115-asa-dhcp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150115-asa-dhcp</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.1
+2015-10-21T16:00:00-0700,Cisco ASA Software DNS Denial of Service Vulnerability,High,"A vulnerability in the DNS code of Cisco Adaptive Security Appliance (ASA) Software could allow an
+unauthenticated, remote attacker to cause an affected system to reload.<br />
+<br />
+The vulnerability is due
+to improper processing of DNS packets. An attacker could exploit this vulnerability by
+sending a request to an affected Cisco ASA appliance to cause it to
+generate a DNS request packet. The attacker would need to spoof the reply packet with a crafted DNS response.<br />
+<br />
+<strong>Note:</strong> Only traffic directed to the affected device can be used to exploit this vulnerability. This vulnerability affects Cisco ASA Software configured in routed or transparent firewall mode and single or multiple context mode. This vulnerability can be triggered by IPv4 and IPv6 traffic.<br />
+<br />
+This vulnerability is documented in Cisco bug ID <a href=""https://bst.cloudapps.cisco.com/bugsearch/bug/CSCut03495"">CSCut03495</a> (<a href=""http://tools.cisco.com/RPF/register/register.do"">registered</a> customers only) and has been assigned Common Vulnerabilities and Exposures (CVE) ID CVE-2015-6325.<br />
+<br />
+Cisco has released software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dns1"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151021-asa-dns1</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],7.1
+2015-10-27T15:00:00-0700,Cisco ASA CX Context-Aware Security Web GUI Unauthorized Access Vulnerability,Medium,"A vulnerability in the web-based GUI of Cisco&nbsp;Adaptive Security Appliance&nbsp;(ASA) CX Context-Aware Security could allow an authenticated, remote attacker to enumerate users and read user information without belonging to a role that allows those operations.<br />
+<br />
+The vulnerability is due to insufficient authorization controls. An attacker could exploit this vulnerability by sending an HTTP request to a specific URL.<br />
+<br />
+Cisco has not released software updates that address this vulnerability. There are no workarounds that mitigate this vulnerability.<br />
+<br />
+This advisory is available at the following link: <a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151027-cas"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151027-cas</a>",[u'Cisco ASA CX Context-Aware Security Software '],4.0
+2015-07-10T16:00:00-0700,OpenSSL Alternative Chains Certificate Forgery Vulnerability (July 2015) Affecting Cisco Products,Medium,"On July 9, 2015, the OpenSSL Project released a security advisory detailing a vulnerability affecting applications that verify certificates, including SSL/Transport Layer Security (TLS)/Datagram Transport Layer Security (DTLS) clients and SSL/TLS/DTLS servers using client authentication.<br />
+<br />
+Multiple Cisco products incorporate a version of the OpenSSL package affected by this vulnerability that could allow an unauthenticated, remote attacker to cause certain checks on untrusted certificates to be bypassed, enabling the attacker to forge ""trusted"" certificates that could be used to conduct man-in-the-middle attacks.<br />
+<br />
+This advisory will be updated as additional information becomes available.<br />
+<br />
+Cisco will release free software updates that address this vulnerability.<br />
+<br />
+Workarounds that mitigate this vulnerability may be available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150710-openssl"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150710-openssl</a>","[u'Cisco Adaptive Security Appliance (ASA) Software ', u'Cisco ASA CX Context-Aware Security Software ']",NA
+2015-08-12T18:05:56-0700,Cisco ASA Unicast Reverse Path Forwarding (uRPF) Bypass Vulnerability,Medium,"A vulnerability in the Unicast Reverse Path Forwarding (uRPF) feature in the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to bypass the uRPF validation checks.<br />
+<br />
+The vulnerability is due to incorrect uRPF validation where IP packets from an outside interface, whose IP address is both in the ASA routing table and associated with an internal interface, are not dropped. An attacker could exploit this vulnerability by sending spoofed IP packets to the ASA in a subnet range that should be dropped. An exploit could allow the attacker to bypass uRPF validation on the ASA and the packet will be incorrectly forwarded on the internal network.<br />
+<br />
+Cisco has confirmed the vulnerability; however, software updates are not available.<br />
+<br />
+<br />
+To exploit this vulnerability, the targeted device must have the<strong> ip verfiy reverse-path interface</strong> command set on an outside interface and the interface must have a default route configured. In addition, the attacker must know a subnet range set on the targeted device that is configured to drop packets prior to sending spoofed IP packets to the device.<br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.0
+2015-01-28T22:30:00-0800,GNU glibc gethostbyname Function Buffer Overflow Vulnerability,Critical,"On January 27, 2015, a buffer overflow vulnerability in the GNU C library (glibc) was publicly announced. This vulnerability is related to the various gethostbyname functions included in glibc and affects applications that call these functions. This vulnerability may allow an attacker to obtain sensitive information from an exploited system or, in some instances, perform remote code execution with the privileges of the application being exploited.<br />
+<br />
+The glibc library is a commonly used third-party software component that is released by the GNU software project and a number of Cisco products are likely affected.<br />
+<br />
+This advisory will be updated as additional information becomes available. Cisco will release free software updates that address this vulnerability. Workarounds that mitigate this vulnerability are not available. <br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150128-ghost"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150128-ghost</a>",[u'Cisco ASA CX Context-Aware Security Software '],NA
+2015-07-14T16:52:53-0700,Cisco Adaptive Security Appliance Message Authentication Code Checking Vulnerability,Medium,"A vulnerability in the Transport Layer Security (TLS) code on the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to modify the contents of an encrypted TLS packet without detection of the modifications.<br />
+<br />
+The vulnerability is due to an error on the firmware of the Cavium Networks cryptographic module. Due to this vulnerability, the message authentication code (MAC) on a TLS packet is not being checked. An attacker could exploit this vulnerability by intercepting encrypted packets in transit and modifying their contents. Such packets would be decrypted by the ASA, but the modification would not be detected.<br />
+<br />
+Cisco has confirmed the vulnerability and released software updates.
+<br />
+<br />
+To exploit this vulnerability, the attacker may need to be in a position to perform a man-in-the-middle attack and be able to intercept encrypted TLS packets in transit from a targeted device, making exploitation more difficult in environments that restrict network access from untrusted sources.<br />
+<br />
+A successful exploit of this vulnerability does not allow an attacker to decrypt the packets in transit or obtain information about the session keys being used for the TLS connection.<br />
+<br />
+Cisco would like to that Mr. Yngve Pettersen from TLS Prober Labs for reporting this vulnerability.",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.3
+2014-10-08T16:00:00-0700,Multiple Vulnerabilities in Cisco ASA Software,Critical,"<strong>2015-July-08 UPDATE: </strong>Cisco PSIRT is aware of disruption to some
+Cisco customers with Cisco ASA devices affected by CVE-2014-3383, the
+Cisco ASA VPN Denial of Service Vulnerability that was disclosed in this
+Security Advisory. Traffic causing the disruption was isolated to a
+specific source IPv4 address. Cisco has engaged the provider and owner
+of that device and determined that the traffic was sent with no
+malicious intent. Cisco strongly recommends that customers upgrade to a
+fixed Cisco ASA software release to remediate this issue.&nbsp;<br />
+<br />
+Cisco Adaptive Security Appliance (ASA) Software is affected by the following vulnerabilities:
+<ul>
+    <li>Cisco ASA SQL*NET Inspection Engine Denial of Service Vulnerability</li>
+    <li>Cisco ASA VPN Denial of Service Vulnerability</li>
+    <li>Cisco ASA IKEv2 Denial of Service Vulnerability </li>
+    <li>Cisco ASA Health and Performance Monitor Denial of Service Vulnerability</li>
+    <li>Cisco ASA GPRS Tunneling Protocol Inspection Engine Denial of Service Vulnerability</li>
+    <li>Cisco ASA SunRPC Inspection Engine Denial of Service Vulnerability</li>
+    <li>Cisco ASA DNS Inspection Engine Denial of Service Vulnerability</li>
+    <li>Cisco ASA VPN Failover Command Injection Vulnerability</li>
+    <li>Cisco ASA VNMC Command Input Validation Vulnerability</li>
+    <li>Cisco ASA Local Path Inclusion Vulnerability </li>
+    <li>Cisco ASA Clientless SSL VPN Information Disclosure and Denial of Service Vulnerability </li>
+    <li>Cisco ASA Clientless SSL VPN Portal Customization Integrity Vulnerability</li>
+    <li>Cisco ASA Smart Call Home Digital Certificate Validation Vulnerability </li>
+</ul>
+These vulnerabilities are independent of one another; a release that is affected by one of the vulnerabilities may not be affected by the others.<br />
+<br />
+Successful exploitation of the Cisco ASA SQL*NET Inspection Engine Denial of Service Vulnerability, Cisco ASA VPN Denial of Service Vulnerability, Cisco ASA IKEv2 Denial of Service Vulnerability, Cisco ASA Health and Performance Monitor Denial of Service Vulnerability, Cisco ASA GPRS Tunneling Protocol Inspection Engine Denial of Service Vulnerability, Cisco ASA SunRPC Inspection Engine Denial of Service Vulnerability, and Cisco ASA DNS Inspection Engine Denial of Service Vulnerability may result in a reload of an affected device, leading to a denial of service (DoS) condition.<br />
+<br />
+Successful exploitation of the Cisco ASA VPN Failover Command Injection Vulnerability, Cisco ASA VNMC Command Input Validation Vulnerability, and Cisco ASA Local Path Inclusion Vulnerability may result in full compromise of the affected system.<br />
+<br />
+Successful exploitation of the Cisco ASA Clientless SSL VPN Information Disclosure and Denial of Service Vulnerability may result in the disclosure of internal information or, in some cases, a reload of the affected system.<br />
+<br />
+Successful exploitation of the Cisco ASA Clientless SSL VPN Portal Customization Integrity Vulnerability may result in a compromise of the Clientless SSL VPN portal, which may lead to several types of attacks, which are not limited to cross-site scripting (XSS), stealing of credentials, or redirects of users to malicious web pages.<br />
+<br />
+Successful exploitation of the Cisco ASA Smart Call Home Digital Certificate Validation Vulnerability may result in a digital certificate validation bypass, which could allow the attacker to bypass digital certificate authentication and gain access inside the network via remote access VPN or management access to the affected system via the Cisco Adaptive Security Device Management (ASDM).<br />
+<br />
+<br />
+Cisco has released software updates that address these vulnerabilities. Workarounds that mitigate some of these vulnerabilities are available.<br />
+<br />
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141008-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20141008-asa</a>",[u'Cisco Adaptive Security Appliance (ASA) Software '],9.0
+2015-07-07T20:49:44-0700,Cisco Adaptive Security Appliance Software OSPFv2 Denial of Service Vulnerability,Medium,"A vulnerability in the Open Shortest Path First version 2 (OSPFv2) code of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, adjacent attacker to cause the reload of the affected system.<br />
+<br />
+The vulnerability is due to improper handling of OSPFv2 packets. An attacker could exploit this vulnerability by sending crafted packets to the affected system. A successful exploit could cause the system to crash, resulting in a denial of service (DoS) condition.<br />
+<br />
+Cisco has confirmed the vulnerability and released software updates.
+<br />
+<br />
+To exploit this vulnerability, an attacker must be on the same broadcast or collision domain as the targeted system. This access requirement reduces the likelihood of a successful exploit.<br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2015-07-02T20:02:38-0700,Cisco Adaptive Security Appliance Software OSPFv2 Denial of Service Vulnerability,Medium,"A vulnerability in the Open Shortest Path First version 2 (OSPFv2) code of Cisco Adaptive Security Appliance (ASA) Software could allow an unauthenticated, adjacent attacker to cause the reload of the affected system.<br />
+<br />
+The vulnerability is due to improper handling of OSPFv2 packets. An attacker could exploit this vulnerability by sending crafted packets to the affected system. A successful exploit could cause the system to crash, resulting in a denial of service (DoS) condition.<br />
+<br />
+Cisco has confirmed the vulnerability and released software updates.
+<br />
+<br />
+To exploit this vulnerability, an attacker must be on the same broadcast or collision domain as the targeted system. This access requirement reduces the likelihood of a successful exploit.<br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.1
+2015-07-01T20:10:12-0700,Cisco Adaptive Security Appliance SNMP Denial of Service Vulnerability,Medium,"A vulnerability in the Simple Network Management Protocol (SNMP) code of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, remote attacker to cause a reload of the affected system.<br />
+<br />
+The vulnerability is due to improper handling of SNMP packets. An attacker could exploit this vulnerability by sending a high rate of traffic through the device while performing SNMP operations continuously. A successful exploit could cause a denial of service (DoS) condition on the targeted device.<br />
+<br />
+Cisco has confirmed the vulnerability and released software updates.
+<br />
+<br />
+To exploit this vulnerability, an attacker must authenticate to the targeted device. This access requirement reduces the likelihood of a successful exploit.<br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],6.8
+2015-06-16T20:43:45-0700,Cisco Adaptive Security Appliance Encrypted IPSec or IKEv2 Packet Modification Vulnerability,Medium,"A vulnerability in the AES-GCM code of Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to modify the contents of an encrypted IPSec or IKEv2 packet, and for those modifications not to be detected.<br />
+<br />
+The vulnerability is due to an error on the firmware of the Cavium Networks cryptographic module. Due to this vulnerability, the integrity check value (ICV) is not verified. An attacker could exploit this vulnerability by intercepting encrypted packets in transit and modifying their contents. Such packets would be decrypted by the ASA and then forwarded to their destination, without the modification being detected.<br />
+<br />
+Cisco has confirmed the vulnerability and released software updates.
+<br />
+<br />
+To exploit this vulnerability, the attacker must be able to intercept encrypted packets in transit, making exploitation more difficult in environments that restrict network access from untrusted sources.<br />
+<br />
+This vulnerability does not allow an attacker to decrypt IPSec or IKEv2 packets in transit, nor obtain information about the session keys being used for the security association. In addition, this vulnerability does not impact SSL/TLS traffic originating from or destined to the ASA.<br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.3
+2015-06-02T21:27:52-0700,Cisco Adaptive Security Appliance XAUTH Bypass Vulnerability,Medium,"A vulnerability in Internet Key Exchange (IKE) version 1 (v1) code of Cisco Adaptive Security Appliance (ASA) Software could allow an authenticated, remote attacker to bypass Extended Authentication (XAUTH) and successfully log in via IPsec remote VPN.<br />
+<br />
+The vulnerability is due to improper implementation of the logic of the XAUTH code. An attacker could exploit this vulnerability by sending crafted IKEv1 packets to the affected system. An exploit could allow the attacker to bypass authentication and access the network via remote VPN.<br />
+<br />
+Cisco has confirmed the vulnerability and released software updates.
+<br />
+<br />
+To exploit this vulnerability, an attacker must authenticate to the targeted device. This access requirement decreases the likelihood of a successful exploit.<br />
+<br />
+This vulnerability affects only Cisco ASA Software configured for IKEv1 IPsec remote access and IKEv1 IPsec LAN-to-LAN. In addition, an attacker would need to know the tunnel group preshared key or have a valid certificate.<br />
+<br />
+<span >
+Cisco would like to thank Daniel Turner of Trustwave for reporting this vulnerability.</span>",[u'Cisco Adaptive Security Appliance (ASA) Software '],4.0
+2015-05-20T19:25:58-0700,Cisco Adaptive Security Appliance Protocol Independent Multicast Registration Vulnerability,Medium,"A vulnerability in the Protocol Independent Multicast (PIM) application of the Cisco Adaptive Security Appliance (ASA) could allow an unauthenticated, remote attacker to disrupt the multicast traffic forwarding on the affected device via a denial-of-service (DoS) attack.<br />
+<br />
+The vulnerability is due to an inconsistency in how the PIM registration is implemented for multicast forwarding. An attacker could exploit this vulnerability by sending a crafted multicast packet to the affected device. An exploit could allow the attacker to disrupt the multicast forwarding via a DoS attack.<br />
+<br />
+Cisco has confirmed the vulnerability and software updates are available.
+<br />
+<br />
+To exploit this vulnerability, an attacker may need access to trusted, internal networks to send specially crafted multicast packets to the affected device. This access requirement may reduce the likelihood of a successful exploit. <br />
+<br />
+An attacker may need to acquire additional information about the targeted device prior to an exploit attempt, such as whether the device is running with a multicast configuration. A multicast configuration is needed for a successful exploit.<br />
+<br />
+Cisco indicates through the CVSS score that functional exploit code exists; however, the code is not known to be publicly available.",[u'Cisco Adaptive Security Appliance (ASA) Software '],5.0
+2015-04-08T16:00:00-0700,Cisco ASA FirePOWER Services and Cisco ASA CX Services Crafted Packets Denial of Service Vulnerability,High,"<span id=""ctl00_MainBodyContainer_DgFields_ctl02_lblField"">A vulnerability in the virtualization layer of the Cisco ASA FirePOWER Services and Cisco ASA Context Aware (CX) Services could allow an unauthenticated, remote attacker to cause
+the a reload of the affected system.<br />
+</span><br />
+Cisco has released software updates that address this vulnerability. The resolution includes upgrading the Cisco ASA FirePOWER Services Software or the Cisco ASA CX Services Software and the Cisco ASA Software. Workarounds that mitigate this vulnerability are not available.
+This advisory is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-cxfp"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-cxfp</a><br />
+<br />
+<strong>Note:</strong> Cisco ASA Software is affected by several other vulnerabilities described in the Cisco Security Advisory <em>Multiple Vulnerabilities in Cisco ASA Software</em>, cisco-sa-20150408-asa.<br />
+Cisco ASA customers should review&nbsp;cisco-sa-20150408-asa before
+determining an upgrade release for Cisco ASA Software.<br />
+<br />
+Cisco Security Advisory <em>Multiple Vulnerabilities in Cisco ASA Software</em> is available at the following link:<br />
+<a href=""http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-asa"">http://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20150408-asa</a><br />","[u'Cisco ASA CX Context-Aware Security Software ', u'Cisco ASA with FirePOWER Services ']",7.8
