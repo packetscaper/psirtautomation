@@ -14,8 +14,7 @@ CiscoPSIRT/openVulnAPI
 
 
 ```
-
-git pull https://github.com/CiscoPSIRT/openVulnAPI.git
+pip install openVulnQuery
 
 ```
 
