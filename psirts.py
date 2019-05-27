@@ -11,6 +11,8 @@ api_secret = None
 webex_token = None
 webex_room_id = None 
 webex_api = None
+today = str(datetime.date.today())
+
 
 class Advisory():
 
@@ -37,32 +39,36 @@ class Advisory():
 
     def fxos_only(self):
         for p in self.all_product_names:
-            if p.find("FX-OS") == -1:
+            if p.find("FX-OS") !=-1 or p.find("FXOS") !=-1:
              self.concerned_products.append(p) 
 
 
 
     def ise_only(self): #clean product array for Cisco ISE
         for p in self.all_product_names:
-            if p.find("Identity Services Engine") == -1:
+            if p.find("Identity Services Engine") != -1:
              self.concerned_products.append(p) 
 
-def get_report(advisories):
-         
-         with open('psirt.csv','w') as f:
+def get_report(advisories,product):
+         file_name = product+today+".csv"
+         with open(file_name,'w') as f:
              fieldnames = ['First_Published','Advisory','Severity','Summary','Product Names','cvss_base_score']
              writer = csv.DictWriter(f,fieldnames=fieldnames)
              writer.writeheader()
+             advisory_flag = 0
              for a in advisories:
-                 dict = {'First_Published':a.first_published,
+                 if a.first_published.find(today) != -1:
+                  advisory_flag = 1
+                  dict = {'First_Published':a.first_published,
                          'Advisory':a.advisory_title,
                          'Severity':a.severity,
                          'Summary':a.summary,
                          'Product Names':a.concerned_products,
                          'cvss_base_score':a.cvss_base_score }
 
-                 writer.writerow(dict)
+                  writer.writerow(dict)
 
+         return advisory_flag      
          
 
 def get_firewall_advisories():
@@ -77,13 +83,16 @@ def get_firewall_advisories():
         firewall_advisories.append(adv_obj)
 
     print "getting report"
-    get_report(firewall_advisories)
+    if (get_report(firewall_advisories,"firewall") == 1):
 
-    webex_api.messages.create(roomId=webex_room_id,
-                            markdown= "Firewall PSIRT alert")
-    file_list = ["psirt.csv"]
-    webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=webex_room_id,
+                            markdown= "Firewall PSIRT alert for " + today )
+     file_list = ["firewall"+today+".csv"]
+     webex_api.messages.create(roomId=webex_room_id,
                      files = file_list )
+    else:
+        webex_api.messages.create(roomId=webex_room_id,
+                            markdown= "No Firewall PSIRT announced today ")
 
 
 def get_ise_advisories():
@@ -96,13 +105,18 @@ def get_ise_advisories():
         adv_obj = Advisory(a)
         adv_obj.ise_only()
         ise_advisories.append(adv_obj)
-    get_report(ise_advisories)
+           
+    if (get_report(ise_advisories,"ise")==1):
 
-    webex_api.messages.create(roomId=webex_room_id,
-                      markdown= "ISE PSIRT alert")
-    file_list = ["psirt.csv"]
-    webex_api.messages.create(roomId=webex_room_id,
+
+     webex_api.messages.create(roomId=webex_room_id,
+                      markdown= "ISE PSIRT alert for " + today)
+     file_list = ["ise"+today+".csv"]
+     webex_api.messages.create(roomId=webex_room_id,
                      files = file_list )
+    else :
+        webex_api.messages.create(roomId=webex_room_id,
+                        markdown= "No ISE PSIRT announced today ")
 
 
 
@@ -116,14 +130,19 @@ def get_fxos_advisories():
         adv_obj = Advisory(a)
         adv_obj.fxos_only()
         fxos_advisories.append(adv_obj)
-    get_report(fxos_advisories)
+    if (get_report(fxos_advisories,"fxos") ==1):
 
-    webex_api.messages.create(roomId=webex_room_id,
-                      markdown= "FXOS PSIRT alert")
-    file_list = ["psirt.csv"]
-    webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=webex_room_id,
+                      markdown= "FXOS PSIRT alert for " + today )
+     file_list = ["fxos"+today+".csv"]
+     webex_api.messages.create(roomId=webex_room_id,
                      files = file_list)
     
+    else :
+
+        webex_api.messages.create(roomId=webex_room_id,
+                        markdown= "No FXOS PSIRT announced today")
+
 
 
 if __name__=='__main__':
