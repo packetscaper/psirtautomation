@@ -49,7 +49,7 @@ Run the docker in an interactive mode to allow input of api and webex keys
 
 ```
 
-docker run -ti psirtautomation
+docker run -ti packetscaper/psirtautomation
 
 ```
 
