@@ -160,10 +160,16 @@ if __name__=='__main__':
 
     webex_token = raw_input("Please enter your webex access_token \n")
     webex_room_id = raw_input("Please enter your webex room_id \n")
+    
+    pid = os.fork()
+    if pid != 0:
+       sys.exit()
 
+    print " running script in the background"
     webex_api = WebexTeamsAPI(access_token=webex_token)
- 
-    schedule.every().day.at("17:59:00").do(daily_check)
+
+    
+    schedule.every().day.at("23:55:00").do(daily_check)
 
     while 1:
         schedule.run_pending()
