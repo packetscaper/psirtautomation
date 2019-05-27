@@ -38,14 +38,14 @@ class Advisory():
     def fxos_only(self):
         for p in self.all_product_names:
             if p.find("FX-OS") == -1:
-              print "test"
+             self.concerned_products.append(p) 
 
 
 
     def ise_only(self): #clean product array for Cisco ISE
         for p in self.all_product_names:
             if p.find("Identity Services Engine") == -1:
-              print "test"
+             self.concerned_products.append(p) 
 
 def get_report(advisories):
          
@@ -69,9 +69,9 @@ def get_firewall_advisories():
 
     q_client = query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
 
-    advisory = q_client.get_by_product('default','asa')
+    firewall_advisory = q_client.get_by_product('default','asa')
     firewall_advisories = []
-    for a in advisory:
+    for a in firewall_advisory:
         adv_obj = Advisory(a)
         adv_obj.firewall_only()
         firewall_advisories.append(adv_obj)
@@ -87,30 +87,30 @@ def get_firewall_advisories():
 
 
 def get_ise_advisories():
-    query_client =query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
+    q_client =query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
 
 
-    ise_advisory = query_client.get_by_product('default','Identity Services Engine')
+    ise_advisory = q_client.get_by_product('default','Identity Services Engine')
     ise_advisories = []
-    for a in advisory:
+    for a in ise_advisory:
         adv_obj = Advisory(a)
         adv_obj.ise_only()
         ise_advisories.append(adv_obj)
     get_report(ise_advisories)
 
-    api.messages.create(roomId=webex_room_id,
+    webex_api.messages.create(roomId=webex_room_id,
                       markdown= "ISE PSIRT alert")
-
-    api.messages.create(roomId=webex_room_id,
-                     files = "psirt.csv")
+    file_list = ["psirt.csv"]
+    webex_api.messages.create(roomId=webex_room_id,
+                     files = file_list )
 
 
 
 def get_fxos_advisories():
 
-    query_client =query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
+    q_client =query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
 
-    fxos_advisory = query_client.get_by_product('default','fxos')
+    fxos_advisory = q_client.get_by_product('default','fxos')
     fxos_advisories = []
     for a in fxos_advisory:
         adv_obj = Advisory(a)
@@ -118,25 +118,25 @@ def get_fxos_advisories():
         fxos_advisories.append(adv_obj)
     get_report(fxos_advisories)
 
-    api.messages.create(roomId=webex_room_id,
+    webex_api.messages.create(roomId=webex_room_id,
                       markdown= "FXOS PSIRT alert")
-
-    api.messages.create(roomId=webex_room_id,
-                     files = "psirt.csv")
+    file_list = ["psirt.csv"]
+    webex_api.messages.create(roomId=webex_room_id,
+                     files = file_list)
     
 
 
 if __name__=='__main__':
 
-    api_id = raw_input("Please enter your api client_id")
-    api_secret = raw_input("Please enter your api client secret")
+    api_id = raw_input("Please enter your api client_id \n")
+    api_secret = raw_input("Please enter your api client secret \n")
 
-    webex_token = raw_input("Please enter your webex access_token")
-    webex_room_id = raw_input("Please enter your webex room_id")
+    webex_token = raw_input("Please enter your webex access_token \n")
+    webex_room_id = raw_input("Please enter your webex room_id \n")
 
     webex_api = WebexTeamsAPI(access_token=webex_token)
     
 
     get_firewall_advisories()
-    #get_ise_advisories()
-    #get_fxos_advisories()
+    get_ise_advisories()
+    get_fxos_advisories()
