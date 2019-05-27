@@ -4,7 +4,8 @@ import sys,os
 import datetime
 import json
 from webexteamssdk import WebexTeamsAPI
-
+import schedule
+import time 
 
 api_id = None
 api_secret = None
@@ -144,6 +145,13 @@ def get_fxos_advisories():
                         markdown= "No FXOS PSIRT announced today")
 
 
+def daily_check():
+  print "Checking for any new PSIRT"
+  
+  get_firewall_advisories()
+  get_ise_advisories()
+  get_fxos_advisories()
+
 
 if __name__=='__main__':
 
@@ -154,8 +162,13 @@ if __name__=='__main__':
     webex_room_id = raw_input("Please enter your webex room_id \n")
 
     webex_api = WebexTeamsAPI(access_token=webex_token)
-    
+ 
+    schedule.every().day.at("17:59:00").do(daily_check)
 
-    get_firewall_advisories()
-    get_ise_advisories()
-    get_fxos_advisories()
+    while 1:
+        schedule.run_pending()
+        time.sleep(100)
+
+
+
+
