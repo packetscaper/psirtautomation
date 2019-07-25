@@ -1,10 +1,22 @@
 # Automating PSIRT notification and reports
 
+## Introduction
+
+Cisco PSIRT global team manages the receipt, investigtion, and public reporting of security vulnerability information that is related 
+to Cisco product and networks.
+The PSIRTs are published in the below link.
+
+The Cisco PSIRT openVuln API is a RESTful API that allows customers to obtain Cisco security vulnerability information in different machine-consumable formats supporting industrywide standards.
+More information can be found in the below page.
+
+https://github.com/CiscoPSIRT/openVulnAPI
 
 
 ## Overview
 
-This project aims to use Cisco openVulnAPI utility to automatically generate reports about PSIRTs affecting various Cisco projects and notify via WebexTeams
+Timely notification of such PSIRTs to the concerned stake holders once PSIRTs are public is essential for compliance and auditing purposes.
+This project aims to use Cisco openVulnAPI utility to automatically generate daily reports about PSIRTs affecting various Cisco projects and notify via WebexTeams.
+Currently it checks daily for PSIRTs released for ISE,ASA and Firepower.
 
 
 ### Prerequisites
