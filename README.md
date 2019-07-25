@@ -42,7 +42,8 @@ pip install webexteamssdk
 ### Setup
 
 1. Use your CCO Account to generate an api client id and an api client secret using the below link <br>
-   https://apiconsole.cisco.com/
+   https://apiconsole.cisco.com/ <br>
+   These keys will be used for calling API calls using openVulnApi
 
 2. Webex Teams <br>
   i.   Create a webex space from your webex teams app <br>
@@ -78,7 +79,7 @@ docker run -ti packetscaper/psirtautomation
 
 
 ## Example 
-
+```
 #python psirts.py <br>
 Please enter your api client_id <br>
 eqr8mzrk78m8 <br>
@@ -89,3 +90,5 @@ NzZlMzgwYzQt <br>
 Please enter your webex room_id <br>
 Y2lzY29zcGF <br>
 running script in the background <br>
+
+```
