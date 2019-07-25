@@ -38,9 +38,17 @@ pip install webexteamssdk
 
 ```
 
-CCO Account to generate PSIRT API keys
 
-https://apiconsole.cisco.com/
+### Prerequisites
+
+1. CCO Account to generate PSIRT API keys
+ More information can be found in the below link. 
+ You will generate an api client id and an api client secret
+ https://apiconsole.cisco.com/
+
+2. Webex Keys
+a. Create a webex space from webex teams app
+b. 
 
 
 
