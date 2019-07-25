@@ -50,7 +50,9 @@ pip install webexteamssdk
 a. Create a webex space from webex teams app
 b. Get the webex room id from the below link by logging in your account.
 https://developer.webex.com/docs/api/v1/rooms/list-rooms
-c. Generate the webex access token
+c. Create a new bot from the below link
+ https://developer.webex.com/my-apps/new/bot
+ Note the acces token of the bot.
 
 
 
