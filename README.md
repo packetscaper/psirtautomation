@@ -48,7 +48,9 @@ pip install webexteamssdk
 
 2. Webex Keys
 a. Create a webex space from webex teams app
-b. 
+b. Get the webex room id from the below link by logging in your account.
+https://developer.webex.com/docs/api/v1/rooms/list-rooms
+c. Generate the webex access token
 
 
 
