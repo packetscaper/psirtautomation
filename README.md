@@ -80,15 +80,14 @@ docker run -ti packetscaper/psirtautomation
 
 ## Example 
 ```
-#python psirts.py <br>
-Please enter your api client_id <br>
-eqr8mzrk78m8 <br>
-Please enter your api client secret <br>
-FbE8XteaMgX <br>
-Please enter your webex access_token <br>
-NzZlMzgwYzQt <br>
-Please enter your webex room_id <br>
-Y2lzY29zcGF <br>
-running script in the background <br>
-
+#python psirts.py 
+Please enter your api client_id 
+eqr8mzrk78m8 
+Please enter your api client secret 
+FbE8XteaMgX 
+Please enter your webex access_token 
+NzZlMzgwYzQt 
+Please enter your webex room_id 
+Y2lzY29zcGF 
+running script in the background 
 ```
