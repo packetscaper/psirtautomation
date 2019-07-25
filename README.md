@@ -39,20 +39,20 @@ pip install webexteamssdk
 ```
 
 
-### Prerequisites
+### Setup
 
 1. CCO Account to generate PSIRT API keys <br>
    More information can be found in the below link <br>
    Generate an api client id and an api client secret using the below link <br>
    https://apiconsole.cisco.com/
 
-2. Webex Keys
-  i) Create a webex space from webex teams app <br>
-  ii) Get the webex room id from the below link by logging in your account <br>
-    https://developer.webex.com/docs/api/v1/rooms/list-rooms <br>
-  iii) Create a new bot from the below link <br>
-     https://developer.webex.com/my-apps/new/bot <br>
-    Note the access token of the bot <br>
+2. Webex Keys <br>
+  i.   Create a webex space from webex teams app <br>
+  ii.  Get the webex room id from the below link by logging in your account <br>
+       https://developer.webex.com/docs/api/v1/rooms/list-rooms <br>
+  iii. Create a new bot from the below link <br>
+       https://developer.webex.com/my-apps/new/bot <br>
+       Note the access token of the bot <br>
 
 
 ### Docker Container
