@@ -15,8 +15,8 @@ https://github.com/CiscoPSIRT/openVulnAPI
 ## Overview
 
 Timely notification of such PSIRTs to the concerned stake holders once PSIRTs are public is essential for compliance and auditing purposes.
-This project aims to use Cisco openVulnAPI utility to automatically generate daily reports about PSIRTs affecting various Cisco projects and notify via WebexTeams.
-Currently it checks daily for PSIRTs released for ISE,ASA and Firepower.
+This project aims to use Cisco openVulnAPI utility to automatically generate daily reports about PSIRTs affecting various Cisco projects and notify via WebexTeams. 
+Currently it does daily checks for PSIRTs released for ISE,ASA and Firepower.
 
 
 ### Prerequisites
@@ -41,11 +41,11 @@ pip install webexteamssdk
 
 ### Setup
 
-1. Use your CCO Account an api client id and an api client secret using the below link <br>
+1. Use your CCO Account to generate an api client id and an api client secret using the below link <br>
    https://apiconsole.cisco.com/
 
-2. Webex Keys <br>
-  i.   Create a webex space from webex teams app <br>
+2. Webex Teams <br>
+  i.   Create a webex space from your webex teams app <br>
   ii.  Get the webex room id from the below link by logging in your account <br>
        https://developer.webex.com/docs/api/v1/rooms/list-rooms <br>
   iii. Create a new bot from the below link <br>
