@@ -51,6 +51,8 @@ pip install webexteamssdk
   iii. Create a new bot from the below link <br>
        https://developer.webex.com/my-apps/new/bot <br>
        Note the access token of the bot <br>
+  iv.  Add the bot to the new webex space created
+  v.   Add more users to the same webex space if required.
 
 
 ### Docker Container
