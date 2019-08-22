@@ -168,7 +168,7 @@ if __name__=='__main__':
     print " running script in the background"
     webex_api = WebexTeamsAPI(access_token=webex_token)
 
-    
+    daily_check()    
     schedule.every().day.at("23:55:00").do(daily_check)
 
     while 1:
