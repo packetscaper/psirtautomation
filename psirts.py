@@ -12,7 +12,7 @@ api_secret = None
 webex_token = None
 webex_room_id = None 
 webex_api = None
-today = str(datetime.date.today())
+
 
 
 class Advisory():
@@ -51,6 +51,7 @@ class Advisory():
              self.concerned_products.append(p) 
 
 def get_report(advisories,product):
+         today = str(datetime.date.today())
          file_name = product+today+".csv"
          with open(file_name,'w') as f:
              fieldnames = ['First_Published','Advisory','Severity','Summary','Product Names','cvss_base_score']
@@ -73,7 +74,7 @@ def get_report(advisories,product):
          
 
 def get_firewall_advisories():
-
+    today = str(datetime.date.today())
     q_client = query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
 
     firewall_advisory = q_client.get_by_product('default','asa')
@@ -97,6 +98,7 @@ def get_firewall_advisories():
 
 
 def get_ise_advisories():
+    today = str(datetime.date.today())
     q_client =query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
 
 
@@ -122,7 +124,7 @@ def get_ise_advisories():
 
 
 def get_fxos_advisories():
-
+    today = str(datetime.date.today())
     q_client =query_client.OpenVulnQueryClient(client_id=api_id,client_secret=api_secret)
 
     fxos_advisory = q_client.get_by_product('default','fxos')
@@ -154,7 +156,7 @@ def daily_check():
 
 
 if __name__=='__main__':
-
+    today = str(datetime.date.today())
     api_id = raw_input("Please enter your api client_id \n")
     api_secret = raw_input("Please enter your api client secret \n")
 
