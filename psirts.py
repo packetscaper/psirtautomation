@@ -84,16 +84,16 @@ def get_firewall_advisories():
         adv_obj.firewall_only()
         firewall_advisories.append(adv_obj)
 
-    print "getting report"
+    print("getting report")
     if (get_report(firewall_advisories,"firewall") == 1):
 
-     webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=str(webex_room_id),
                             markdown= "Firewall PSIRT alert for " + today )
      file_list = ["firewall"+today+".csv"]
-     webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=str(webex_room_id),
                      files = file_list )
     else:
-        webex_api.messages.create(roomId=webex_room_id,
+        webex_api.messages.create(roomId=str(webex_room_id),
                             markdown= "No Firewall PSIRT announced today ")
 
 
@@ -112,13 +112,13 @@ def get_ise_advisories():
     if (get_report(ise_advisories,"ise")==1):
 
 
-     webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=str(webex_room_id),
                       markdown= "ISE PSIRT alert for " + today)
      file_list = ["ise"+today+".csv"]
-     webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=str(webex_room_id),
                      files = file_list )
     else :
-        webex_api.messages.create(roomId=webex_room_id,
+        webex_api.messages.create(roomId=str(webex_room_id),
                         markdown= "No ISE PSIRT announced today ")
 
 
@@ -135,20 +135,20 @@ def get_fxos_advisories():
         fxos_advisories.append(adv_obj)
     if (get_report(fxos_advisories,"fxos") ==1):
 
-     webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=str(webex_room_id),
                       markdown= "FXOS PSIRT alert for " + today )
      file_list = ["fxos"+today+".csv"]
-     webex_api.messages.create(roomId=webex_room_id,
+     webex_api.messages.create(roomId=str(webex_room_id),
                      files = file_list)
     
     else :
 
-        webex_api.messages.create(roomId=webex_room_id,
+        webex_api.messages.create(roomId=str(webex_room_id),
                         markdown= "No FXOS PSIRT announced today")
 
 
 def daily_check():
-  print "Checking for any new PSIRT"
+  print("Checking for any new PSIRT")
   
   get_firewall_advisories()
   get_ise_advisories()
@@ -157,17 +157,17 @@ def daily_check():
 
 if __name__=='__main__':
     today = str(datetime.date.today())
-    api_id = raw_input("Please enter your api client_id \n")
-    api_secret = raw_input("Please enter your api client secret \n")
+    api_id = input("Please enter your api client_id \n")
+    api_secret = input("Please enter your api client secret \n")
 
-    webex_token = raw_input("Please enter your webex access_token \n")
-    webex_room_id = raw_input("Please enter your webex room_id \n")
+    webex_token = input("Please enter your webex access_token \n")
+    webex_room_id = input("Please enter your webex room_id \n")
     
     pid = os.fork()
     if pid != 0:
        sys.exit()
 
-    print " running script in the background"
+    print(" running script in the background")
     webex_api = WebexTeamsAPI(access_token=webex_token)
 
     daily_check()    
