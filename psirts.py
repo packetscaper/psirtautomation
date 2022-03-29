@@ -87,13 +87,13 @@ def get_firewall_advisories():
     print("getting report")
     if (get_report(firewall_advisories,"firewall") == 1):
 
-     webex_api.messages.create(roomId=str(webex_room_id),
+     webex_api.messages.create(roomId=webex_room_id,
                             markdown= "Firewall PSIRT alert for " + today )
      file_list = ["firewall"+today+".csv"]
-     webex_api.messages.create(roomId=str(webex_room_id),
+     webex_api.messages.create(roomId=webex_room_id,
                      files = file_list )
     else:
-        webex_api.messages.create(roomId=str(webex_room_id),
+        webex_api.messages.create(roomId=webex_room_id,
                             markdown= "No Firewall PSIRT announced today ")
 
 
@@ -112,13 +112,13 @@ def get_ise_advisories():
     if (get_report(ise_advisories,"ise")==1):
 
 
-     webex_api.messages.create(roomId=str(webex_room_id),
+     webex_api.messages.create(roomId=webex_room_id,
                       markdown= "ISE PSIRT alert for " + today)
      file_list = ["ise"+today+".csv"]
-     webex_api.messages.create(roomId=str(webex_room_id),
+     webex_api.messages.create(roomId=webex_room_id,
                      files = file_list )
     else :
-        webex_api.messages.create(roomId=str(webex_room_id),
+        webex_api.messages.create(roomId=webex_room_id,
                         markdown= "No ISE PSIRT announced today ")
 
 
@@ -135,15 +135,15 @@ def get_fxos_advisories():
         fxos_advisories.append(adv_obj)
     if (get_report(fxos_advisories,"fxos") ==1):
 
-     webex_api.messages.create(roomId=str(webex_room_id),
+     webex_api.messages.create(roomId=webex_room_id,
                       markdown= "FXOS PSIRT alert for " + today )
      file_list = ["fxos"+today+".csv"]
-     webex_api.messages.create(roomId=str(webex_room_id),
+     webex_api.messages.create(roomId=webex_room_id,
                      files = file_list)
     
     else :
 
-        webex_api.messages.create(roomId=str(webex_room_id),
+        webex_api.messages.create(roomId=webex_room_id,
                         markdown= "No FXOS PSIRT announced today")
 
 
